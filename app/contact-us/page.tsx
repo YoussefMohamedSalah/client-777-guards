@@ -2,14 +2,11 @@ import Navbar from "@/components/navbar/navbar";
 import ContactForm from "./contact-form";
 import Footer from "@/components/footer";
 
-const Contact = () => {
-    return ( 
-    <div>
-     <Navbar />
-     <ContactForm />
-
-    </div> 
-    );
+const ContactUsPage = () => {
+	return (
+		<div>
+			<ContactForm />
+		</div>
+	);
 }
- 
-export default Contact;
+export default ContactUsPage;

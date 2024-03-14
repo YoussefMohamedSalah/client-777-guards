@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/navbar/navbar'
+import Footer from '@/components/footer'
 
 const font = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Your Connected Workspace',
+  title: '777-Guards',
   description: 'Bird - Simple and powerful notes & docs for teams',
 }
 
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

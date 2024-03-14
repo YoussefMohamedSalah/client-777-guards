@@ -1,4 +1,3 @@
-import Navbar from "@/components/navbar/navbar";
 import HeroSection from "./hero-section";
 import SecondSection from "./second-section";
 import ThirdSection from "./third-section";
@@ -7,13 +6,11 @@ import FifthSection from "./fifth-section";
 import SixthSection from "./sixth-section";
 import SeventhSection from "./seventh-section";
 import GetStartedFree from "./eighth-section";
-import Footer from "@/components/footer";
 import AboutUsSection from "./about-us-section";
 
 const LandingPage = () => {
 	return (
 		<div className="">
-			<Navbar />
 			{/* <HeroSection /> */}
 			<AboutUsSection />
 			{/*  */}
@@ -24,7 +21,6 @@ const LandingPage = () => {
 			<SixthSection />
 			<SeventhSection />
 			<GetStartedFree /> */}
-			<Footer />
 		</div>
 	);
 }

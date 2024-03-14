@@ -8,19 +8,22 @@ import SixthSection from "./sixth-section";
 import SeventhSection from "./seventh-section";
 import GetStartedFree from "./eighth-section";
 import Footer from "@/components/footer";
+import AboutUsSection from "./about-us-section";
 
 const LandingPage = () => {
 	return (
 		<div className="">
 			<Navbar />
-			<HeroSection />
-			<SecondSection />
+			{/* <HeroSection /> */}
+			<AboutUsSection />
+			{/*  */}
+			{/* <SecondSection />
 			<ThirdSection />
 			<FourthSection />
 			<FifthSection />
 			<SixthSection />
 			<SeventhSection />
-			<GetStartedFree />
+			<GetStartedFree /> */}
 			<Footer />
 		</div>
 	);

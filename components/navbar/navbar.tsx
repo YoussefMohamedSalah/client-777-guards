@@ -31,11 +31,13 @@ const Navbar = () => {
 
   return (
     <div className={navbarClasses}>
-      <div className="flex items-center justify-center">
-        <Logo />
-        <Menu />
+      <div className="container flex items-center justify-between">
+        <div className="flex items-center justify-center gap-2">
+          <Logo />
+          <Menu />
+        </div>
+        <ActionButtons />
       </div>
-      <ActionButtons />
     </div>
   );
 };

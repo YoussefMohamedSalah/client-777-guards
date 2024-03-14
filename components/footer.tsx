@@ -1,82 +1,71 @@
 import Image from "next/image";
 import { PiFacebookLogoFill, PiInstagramLogo, PiInstagramLogoFill, PiLinkedinLogoFill, PiTwitterLogoFill, PiYoutubeLogoFill } from "react-icons/pi";
+import LocationMap from "./locationMap";
+import Link from "next/link"
 
 const Footer = () => {
   return (
-    <div className="container flex lg:items-center pb-10 flex-col px-8 lg:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
-      <div className="lg:flex lg:space-x-32 md:px-0 ">
-        <div className="pt-4">
-          <Image
-            src="/logos/777-guards-logo.jpeg"
-            width={150}
-            height={150}
-            alt="logo"
-            className=" w-18"
-          />
-          <div className="flex  space-x-2">
-            <PiInstagramLogoFill className="text-2xl text-gray-500" />
-            <PiTwitterLogoFill className="text-2xl text-gray-500" />
-            <PiFacebookLogoFill className="text-2xl text-gray-500" />
-            <PiYoutubeLogoFill className="text-2xl text-gray-500" />
-            <PiLinkedinLogoFill className="text-2xl text-gray-500" />
+    <div className="border-t border-gray-200">
+      <div className="container my-6">
+        <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 md:px-0">
+          {/* MAP */}
+          <div className="lg:col-span-8">
+            <div className="lg:grid lg:grid-cols-12">
+              <div className="lg:col-span-8">
+                <LocationMap />
+              </div>
+              {/* LOGO */}
+              <div className="lg:col-span-4 pt-4 flex items-center justify-center lg:justify-center lg:items-center">
+                <div className="flex flex-col items-center space-x-2">
+                  <Link href="/">
+                    <Image
+                      src="/logos/777-guards-logo.jpeg"
+                      width={150}
+                      height={150}
+                      alt="logo"
+                      className="w-18 pb-3"
+                    />
+                  </Link>
+                  <div className="flex space-x-2">
+                    <PiInstagramLogoFill className="text-2xl text-gray-500" />
+                    <PiTwitterLogoFill className="text-2xl text-gray-500" />
+                    <PiFacebookLogoFill className="text-2xl text-gray-500" />
+                    <PiYoutubeLogoFill className="text-2xl text-gray-500" />
+                    <PiLinkedinLogoFill className="text-2xl text-gray-500" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="flex-col space-y-6 ">
-          <div className="pt-10 font-medium">PRODUCT</div>
-          <div className="font-light space-y-4 text-sm">
-            <div>Home</div>
-            <div>Product</div>
-            <div>What&apos;s New</div>
-            <div>Pricing</div>
-            <div>Premium</div>
-
+          <div className="lg:col-span-4">
+            <div className="lg:grid lg:grid-cols-12">
+              <div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
+                <div className="font-medium">Call us</div>
+                <div className="font-light space-y-4 text-sm">
+                  <div>email</div>
+                  <div>phone</div>
+                  <div>mobile</div>
+                  <div>land line</div>
+                </div>
+              </div>
+              {/* FAST ACCESS */}
+              <div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
+                <div className="font-medium">FAST ACCESS</div>
+                <div className="font-light space-y-4 text-sm">
+                  <div>Home</div>
+                  <div>About 777-guards</div>
+                  <div>News</div>
+                  <div>Our companies</div>
+                  <div>Jobs</div>
+                </div>
+              </div>
+            </div>
           </div>
+          {/* END */}
         </div>
-
-        <div className="flex-col space-y-6 flex ">
-          <div className="pt-10 font-medium">USE CASES</div>
-          <div className="font-light space-y-4 text-sm">
-
-            <div>Company</div>
-            <div>Leadership</div>
-
-            <div>Customers</div>
-            <div>Diversity</div>
-
-          </div>
-
-        </div>
-
-
-        <div className="flex-col space-y-6 flex ">
-          <div className="pt-10 font-medium">FOR BUSINESS</div>
-          <div className="font-light space-y-4 text-sm">
-
-            <div>Project Management</div>
-            <div>Goal Management</div>
-
-            <div>Increase Productivity</div>
-            <div>Work Management</div>
-            <div>Project Planning</div>
-
-          </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
       </div>
-
-
-    </div>);
+    </div>
+  );
 }
 
 export default Footer;

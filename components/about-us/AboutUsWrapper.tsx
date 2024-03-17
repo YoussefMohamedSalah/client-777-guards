@@ -5,15 +5,15 @@ import OurMission from "@/components/about-us/OurMission";
 import Border from "../ui/border";
 
 const AboutUsWrapper = () => {
-	return (
-		<>
-			<MainSection />
-			<Border />
-			<OurServices />
-			<Border />
-			<OurMission />
-		</>
-	);
+  return (
+    <>
+      <MainSection />
+      <Border />
+      <OurServices />
+      <Border />
+      <OurMission />
+    </>
+  );
 };
 
 export default AboutUsWrapper;

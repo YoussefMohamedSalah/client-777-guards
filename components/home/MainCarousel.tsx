@@ -37,8 +37,8 @@ const MainCarousel = () => {
   ];
 
   return (
-    <section className="header-slider w-100">
-      <div className="swiper position-sticky">
+    <section className="container mx-auto">
+      <div className="swiper position-sticky" >
         <div className="swiper-wrapper">
           <Carousel
             responsive={SINGLE_ITEM_BREAKPOINTS}
@@ -75,7 +75,7 @@ const MainCarousel = () => {
                       maxHeight: "500px",
                       minHeight: "220px",
                     }}
-                    className="img-fluid"
+                    className="img-fluid rounded-md"
                     src={banner.url}
                     alt="security"
                     width={2170}
@@ -87,8 +87,8 @@ const MainCarousel = () => {
             })}
           </Carousel>
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 };
 

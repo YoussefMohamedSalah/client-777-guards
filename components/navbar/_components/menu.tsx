@@ -70,7 +70,7 @@ export function Menu() {
         </NavigationMenuItem>
         {/* With children */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Our companies</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Our services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="flex">
               <ul className="grid  p-2 md:w-[400px]  lg:w-[250px] hover:cursor-pointer border-r">

@@ -7,22 +7,13 @@ import SixthSection from "./sixth-section";
 import SeventhSection from "./seventh-section";
 import GetStartedFree from "./eighth-section";
 import AboutUsSection from "./about-us-section";
-import MainCarousel from "./main-carousel";
+import MainCarousel from "../../../components/home/MainCarousel";
+import HomeWrapper from "@/components/home/HomeWrapper";
 
 const LandingPage = () => {
   return (
     <div className="">
-      {/* <HeroSection /> */}
-      <MainCarousel />
-      <AboutUsSection />
-      {/*  */}
-      {/* <SecondSection />
-			<ThirdSection />
-			<FourthSection />
-			<FifthSection />
-			<SixthSection />
-			<SeventhSection />
-			<GetStartedFree /> */}
+      <HomeWrapper />
     </div>
   );
 };

@@ -95,7 +95,6 @@ const ActionButtons = ({ lang }: Props) => {
         </div>
 
         <div className="font-thin lg:flex items-center hidden">|</div>
-
         <div className="flex lg:space-x-4 items-center pr-2">
           <div style={{ zIndex: 99999 }}>
             {lang === "ar" ? (

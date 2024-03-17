@@ -64,14 +64,8 @@ const FifthSection = () => {
         {tabs.map((tab) => (
           <motion.div
             key={tab.name}
-            className={`
-              flex 
-            p-1
-              md:p-8
-             
-      
+            className={`flex p-1 md:p-8
                 cursor-pointer
-        
                 ${
                   activeTab.name === tab.name
                     ? "rounded-md md:rounded-xl bg-[#f6f5f4]  md:bg-white border-gray-200 md:border items-center justify-center flex p-1 "

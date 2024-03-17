@@ -7,20 +7,11 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
-import {
-  PiArrowRight,
-  PiBookOpenTextLight,
-  PiFileThin,
-  PiSparkleLight,
-  PiTargetLight,
-} from "react-icons/pi";
-
+import { PiArrowRight, PiBookOpenTextLight, PiFileThin, PiSparkleLight, PiTargetLight } from "react-icons/pi";
 
 const tabs = [
   {
-    icon: (
-      <PiSparkleLight className="text-3xl mr-2 text-purple-600 bg-purple-100 p-1 rounded-md" />
-    ),
+    icon: <PiSparkleLight className="text-3xl mr-2 text-purple-600 bg-purple-100 p-1 rounded-md" />,
     name: "AI",
     feature: "Now with Q&A",
     description: "Ask literally anything. Bird Will answer.",
@@ -32,9 +23,7 @@ const tabs = [
     image: "/assets/GroovyDoodle.svg",
   },
   {
-    icon: (
-      <PiBookOpenTextLight className="text-3xl mr-2 text-red-600 bg-red-100 p-1 rounded-md" />
-    ),
+    icon: <PiBookOpenTextLight className="text-3xl mr-2 text-red-600 bg-red-100 p-1 rounded-md" />,
     name: "Wikis",
     description: "Centralize your knowledge. Make it accessible.",
     more: (
@@ -46,9 +35,7 @@ const tabs = [
   },
 
   {
-    icon: (
-      <PiTargetLight className="text-3xl mr-2 text-blue-600 bg-blue-100 p-1 rounded-md" />
-    ),
+    icon: <PiTargetLight className="text-3xl mr-2 text-blue-600 bg-blue-100 p-1 rounded-md" />,
     name: "Projects",
     description: "Manage complex projects without the chaos",
     more: (
@@ -60,9 +47,7 @@ const tabs = [
     image: "/assets/CoffeeDoddle.svg",
   },
   {
-    icon: (
-      <PiFileThin className="text-3xl mr-2 text-yellow-600 bg-yellow-100 p-1 rounded-md" />
-    ),
+    icon: <PiFileThin className="text-3xl mr-2 text-yellow-600 bg-yellow-100 p-1 rounded-md" />,
     name: "Docs",
     description: "Simple, powerfulm beautiful. Next-gen notes & docs.",
     more: (
@@ -97,8 +82,7 @@ const HeroSection = () => {
           xl:font-medium
           xl:pt-14
           text-center 
-          pt-6"
-      >
+          pt-6">
         Write, plan, share. With AI at your side.
       </div>
 
@@ -109,8 +93,7 @@ const HeroSection = () => {
             text-center
             w-2/3
             mx-auto
-            "
-      >
+            ">
         Bird is the connected workspace where better, faster work happens.
       </p>
 
@@ -150,19 +133,15 @@ const HeroSection = () => {
       
                 cursor-pointer
         
-                ${activeTab.name === tab.name
+                ${
+                  activeTab.name === tab.name
                     ? "rounded-md md:rounded-xl bg-[#f6f5f4]  md:bg-white border-gray-200 md:border items-center justify-center flex p-1 "
                     : "md:bg-[#f6f5f4]   rounded-md xl:rounded-xl p-1 items-center justify-center hover:bg-[#eae7e7] "
-                  } `
-                }
-
-                onClick={() => setActiveTab(tab)}
-              >
+                } `}
+                onClick={() => setActiveTab(tab)}>
                 <div className="flex flex-col   items-center md:justify-center mx-auto">
                   <div className="hidden md:flex text-4xl">{tab.icon}</div>
-                  <div className="font-medium text-sm  xl:text-lg mt-1">
-                    {tab.name}
-                  </div>
+                  <div className="font-medium text-sm  xl:text-lg mt-1">{tab.name}</div>
                 </div>
               </motion.div>
             ))}
@@ -191,10 +170,6 @@ const HeroSection = () => {
             )}
           </div>
         </div>
-
-
-
-
       ) : (
         <div className="flex  xl:space-x-4 items-center justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
           {tabs.map((tab) => (
@@ -210,13 +185,9 @@ const HeroSection = () => {
                 xl:my-0
                 w-60
                 h-36
-                ${activeTab === tab
-                  ? "border rounded-xl pt-2 bg-white "
-                  : "shadow-md rounded-xl pt-2  bg-[#f6f5f4] m"
-                }
+                ${activeTab === tab ? "border rounded-xl pt-2 bg-white " : "shadow-md rounded-xl pt-2  bg-[#f6f5f4] m"}
               `}
-              onMouseEnter={() => setActiveTab(tab)}
-            >
+              onMouseEnter={() => setActiveTab(tab)}>
               <div className="px-4">
                 <div className="flex items-center">
                   <div>{tab.icon}</div>
@@ -234,22 +205,18 @@ const HeroSection = () => {
                   className="flex flex-col text-sm"
                   initial={{ y: 0 }}
                   animate={{ y: activeTab === tab ? 10 : 25 }}
-                  transition={{ duration: 0.2 }}
-                >
+                  transition={{ duration: 0.2 }}>
                   <div>
                     {/* Only animate the description */}
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
+                      transition={{ duration: 0.3 }}>
                       {tab.description}
                     </motion.div>
                   </div>
                   {/* Conditional rendering for "Learn more" link */}
-                  {activeTab === tab && (
-                    <div className="text-sm mt-2">{tab.more}</div>
-                  )}
+                  {activeTab === tab && <div className="text-sm mt-2">{tab.more}</div>}
                 </motion.div>
               </div>
             </motion.div>
@@ -278,7 +245,6 @@ const HeroSection = () => {
         )}
       </div>
     </div>
-
   );
 };
 

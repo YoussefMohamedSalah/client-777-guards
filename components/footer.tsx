@@ -1,14 +1,55 @@
 import Image from "next/image";
-import { PiFacebookLogoFill, PiEnvelopeSimple, PiInstagramLogoFill, PiLinkedinLogoFill, PiTwitterLogoFill, PiYoutubeLogoFill } from "react-icons/pi";
+import {
+  PiFacebookLogoFill,
+  PiEnvelopeSimple,
+  PiInstagramLogoFill,
+  PiLinkedinLogoFill,
+  PiTwitterLogoFill,
+  PiYoutubeLogoFill,
+} from "react-icons/pi";
 import LocationMap from "./locationMap";
-import Link from "next/link"
+import Link from "next/link";
 import { LiaMobileAltSolid } from "react-icons/lia";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { GiRotaryPhone } from "react-icons/gi";
 
-
 const Footer = () => {
+  const social = [
+    {
+      id: 1,
+      path: "https://www.facebook.com/",
+      image: "/assets/social/facebook.svg",
+      name: "facebook",
+      width: 20,
+      height: 20,
+    },
+    {
+      id: 2,
+      path: "https://twitter.com/",
+      image: "/assets/social/twitter.svg",
+      name: "twitter",
+      width: 20,
+      height: 20,
+    },
+    {
+      id: 3,
+      path: "https://www.instagram.com/",
+      image: "/assets/social/instagram.svg",
+      name: "instagram",
+      width: 20,
+      height: 20,
+    },
+    {
+      id: 4,
+      path: "https://www.youtube.com/",
+      image: "/assets/social/youtube.svg",
+      name: "youtube",
+      width: 20,
+      height: 20,
+    },
+  ];
+
   return (
     <div className="border-t border-gray-200 mt-10">
       <div className="container my-6">
@@ -31,13 +72,29 @@ const Footer = () => {
                       className="w-18 pb-3"
                     />
                   </Link>
-                  <div className="flex space-x-2">
+                  {/* <div className="flex space-x-2">
                     <PiInstagramLogoFill className="text-2xl text-gray-500" />
                     <PiTwitterLogoFill className="text-2xl text-gray-500" />
                     <PiFacebookLogoFill className="text-2xl text-gray-500" />
                     <PiYoutubeLogoFill className="text-2xl text-gray-500" />
                     <PiLinkedinLogoFill className="text-2xl text-gray-500" />
-                  </div>
+                  </div> */}
+
+                  <ul className="flex flex-wrap space-s-4 md:space-s-5 mx-auto md:mx-0 gap-3 pt-2">
+                    {social?.map((item) => (
+                      <li className="transition hover:opacity-80" key={`social-list--key${item.id}`}>
+                        <Link href={item.path ? item.path : "/#"} target="_blank" rel="noreferrer">
+                          <Image
+                            src={item.image}
+                            alt={item.name}
+                            height={item.height}
+                            width={item.width}
+                            className="transform scale-85 md:scale-100"
+                          />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
@@ -45,7 +102,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
-                <div className="font-medium">Call us</div>
+                <div className="text-lg  xl:text-[18px] xl:leading-6 font-bold">Call us</div>
                 <div className="font-light space-y-4 text-sm">
                   <div className="flex items-center">
                     <MdAlternateEmail className="text-2xl text-gray-500" />
@@ -67,7 +124,7 @@ const Footer = () => {
               </div>
               {/* FAST ACCESS */}
               <div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
-                <div className="font-medium">FAST ACCESS</div>
+                <div className="text-lg xl:text-[18px] xl:leading-6 font-bold">FAST ACCESS</div>
                 <div className="font-light space-y-4 text-sm">
                   <div className="flex items-center">
                     <span className="ml-2">Home</span>
@@ -93,6 +150,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

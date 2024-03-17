@@ -5,7 +5,11 @@ import ActionButtons from "./_components/action-buttons";
 import Logo from "./_components/logo";
 import { Menu } from "./_components/menu";
 
-const Navbar = () => {
+interface Props {
+  lang: string;
+}
+
+const Navbar = ({ lang }: Props) => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
@@ -25,7 +29,7 @@ const Navbar = () => {
   }, []);
 
   const navbarClasses = `
-    mb-10 flex items-center justify-between space-x-10 bg-white  h-14
+    flex items-center justify-between space-x-10 bg-white  h-14
     sticky top-0 z-50 border-b border-gray-200
   `;
 
@@ -36,7 +40,7 @@ const Navbar = () => {
           <Logo />
           <Menu />
         </div>
-        <ActionButtons />
+        <ActionButtons lang={lang} />
       </div>
     </div>
   );

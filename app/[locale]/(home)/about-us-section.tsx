@@ -7,55 +7,48 @@ import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
-import {
-  PiArrowRight,
-  PiBookOpenTextLight,
-  PiFileThin,
-  PiSparkleLight,
-  PiTargetLight,
-} from "react-icons/pi";
-
+import { PiArrowRight, PiBookOpenTextLight, PiFileThin, PiSparkleLight, PiTargetLight } from "react-icons/pi";
 
 const tabs = [
   {
     id: 1,
     name: "Facility protection.",
-    image: "/assets/GroovyDoodle.svg",
+    image: "/images/sample.jpeg",
   },
   {
     id: 2,
     name: "Personal protection.",
-    image: "/assets/PlantDoodle.svg",
+    image: "/images/sample.jpeg",
   },
   {
     id: 3,
     name: "Support, intervention and security consultations.",
-    image: "/assets/CoffeeDoddle.svg",
+    image: "/images/sample.jpeg",
   },
   {
     id: 4,
     name: "Industrial security.",
-    image: "/assets/GroovyDoodle.svg",
+    image: "/images/sample.jpeg",
   },
   {
     id: 5,
     name: "Public event security.",
-    image: "/assets/RunningDoodle.svg",
+    image: "/images/sample.jpeg",
   },
   {
     id: 6,
     name: "Women's security.",
-    image: "/assets/GroovyDoodle.svg",
+    image: "/images/sample.jpeg",
   },
   {
     id: 7,
     name: "Guard dogs.",
-    image: "/assets/CoffeeDoddle.svg",
+    image: "/images/sample.jpeg",
   },
   {
     id: 8,
     name: "Training in safety and occupational health.",
-    image: "/assets/CoffeeDoddle.svg",
+    image: "/images/sample.jpeg",
   },
 ];
 
@@ -66,28 +59,22 @@ const AboutUsSection = () => {
 
   return (
     <div className="md:items-center flex container">
-
       {isSmallScreen ? (
         <div className="xl:px-8">
           <div className="flex flex-col md:row-span-1 gap-2 xl:gap-6 mt-8 xl:px-0">
-            <p className="text-2xl pt-4 text-start mx-auto">
-              Our services contain.
-            </p>
+            <p className="text-2xl pt-4 text-start mx-auto">Our services contain.</p>
             {tabs.map((tab, index: number) => (
               <motion.div
                 key={index}
                 className={`flex p-1 md:p-8 cursor-pointer
-                ${activeTab.id === tab.id
+                ${
+                  activeTab.id === tab.id
                     ? "rounded-md md:rounded-xl bg-[#f6f5f4] md:bg-white border-gray-200 md:border"
                     : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl items-start justify-start hover:bg-[#eae7e7] "
-                  } `
-                }
-                onClick={() => setActiveTab(tab)}
-              >
+                } `}
+                onClick={() => setActiveTab(tab)}>
                 <div className="flex flex-col items-start md:justify-start">
-                  <div className="font-medium text-sm xl:text-lg">
-                    {tab.name}
-                  </div>
+                  <div className="font-medium text-sm xl:text-lg">{tab.name}</div>
                 </div>
               </motion.div>
             ))}
@@ -105,8 +92,8 @@ const AboutUsSection = () => {
                   className="
                 w-full
                 border
-                p-20
-                xl:p-40
+                
+                
                 rounded-xl
                 "
                 />
@@ -122,8 +109,7 @@ const AboutUsSection = () => {
             pt-4
             text-start
             mx-auto
-            "
-          >
+            ">
             Our services contain.
           </p>
           {tabs.map((tab, index: number) => (
@@ -137,33 +123,27 @@ const AboutUsSection = () => {
       sm:my-10
       xl:my-0
       
-      ${activeTab === tab
-                  ? "text-[#001b96]"
-                  : "text-black m"
-                }
+      ${activeTab === tab ? "text-[#001b96]" : "text-black m"}
     `}
               onMouseEnter={() => setActiveTab(tab)}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 1,
-                delay: index * 0.1
-              }}
-            >
+                delay: index * 0.1,
+              }}>
               <div className="px-4">
                 <motion.div
                   className="flex flex-col text-sm"
                   initial={{ x: 0 }}
                   animate={{ x: activeTab === tab ? 25 : 10 }}
-                  transition={{ duration: 0.2 }}
-                >
+                  transition={{ duration: 0.2 }}>
                   <div>
                     {/* Only animate the name */}
                     <motion.div
                       initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
+                      transition={{ duration: 0.3 }}>
                       {tab.name}
                     </motion.div>
                   </div>
@@ -171,7 +151,6 @@ const AboutUsSection = () => {
               </div>
             </motion.div>
           ))}
-
         </div>
       )}
 
@@ -186,8 +165,8 @@ const AboutUsSection = () => {
               alt="logo"
               className="
                 w-full
-                p-20
-                xl:p-40
+                
+                
                 shadow-md
                 rounded-xl
                 bg-[#f6f5f4]"
@@ -195,9 +174,7 @@ const AboutUsSection = () => {
           </div>
         )}
       </div>
-
     </div>
-
   );
 };
 

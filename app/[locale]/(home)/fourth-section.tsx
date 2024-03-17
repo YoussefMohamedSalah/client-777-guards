@@ -40,8 +40,7 @@ const tabs = [
   {
     icon: <PiPaletteLight className="text-3xl mr-2 text-sky-600 rounded-md" />,
     header: "Choose from a variety of colors",
-    subheading:
-      "Everything is customizable. Choose your own colors, icons, and more to make Bird work for you.",
+    subheading: "Everything is customizable. Choose your own colors, icons, and more to make Bird work for you.",
     image: "/assets/CoffeeDoddle.svg",
   },
 ];
@@ -80,8 +79,7 @@ const FourthSection = () => {
                 index === 0
                   ? " xl:col-span-4 xl:row-span-3  md:col-span-2   flex-col  xl:flex-col"
                   : "xl:col-span-2 xl:row-span-3 flex-col "
-              } bg-[#f6f5f4] p-6 rounded-xl  flex `}
-            >
+              } bg-[#f6f5f4] p-6 rounded-xl  flex `}>
               <div className="flex flex-col ">
                 {tab.icon}
                 <div className="text-lg font-medium mt-2">{tab.header}</div>
@@ -109,15 +107,10 @@ const FourthSection = () => {
                           onClick={() => setActiveImageIndex(index)}
                           className={`${
                             index === activeImageIndex
-                              ?  "rounded-md bg-[#dbd9d9] items-center justify-center flex p-1 "
+                              ? "rounded-md bg-[#dbd9d9] items-center justify-center flex p-1 "
                               : "  rounded-md p-1 items-center justify-center bg-[#f6f5f4] hover:bg-[#eae7e7] "
-                          }  `}
-                        >
-                          <div className=" text-sm items-center justify-center flex">
-                            {image.title}
-
-                            </div>
-                     
+                          }  `}>
+                          <div className=" text-sm items-center justify-center flex">{image.title}</div>
                         </div>
                       ))}
                     </div>
@@ -145,30 +138,26 @@ const FourthSection = () => {
         <div
           className={cn(
             "flex items-center justify-center text-xl xl:text-2xl xl:py-10 pt-6 px-8 md:px-8  md:w-2/3 xl:w-1/2 text-center ",
-            font.className
-          )}
-        >
-          &quot;Bird adapts to your needs. It&apos;s as minimal or as powerful
-          as you need it to be.&quot;
+            font.className,
+          )}>
+          &quot;Bird adapts to your needs. It&apos;s as minimal or as powerful as you need it to be.&quot;
         </div>
 
+        <div className="items-center flex justify-center flex-col">
+          <Image
+            src="/logos/logoipsum-327.svg"
+            alt="Canva logo"
+            width={1000}
+            height={1000}
+            className="pt-2 xl:pt-0  w-10 xl:w-14 "
+          />
 
-          <div className="items-center flex justify-center flex-col">
-            <Image
-              src="/logos/logoipsum-327.svg"
-              alt="Canva logo"
-              width={1000}
-              height={1000}
-              className="pt-2 xl:pt-0  w-10 xl:w-14 "
-            />
-       
           <div className="m text-center">
             <div className="text-sm  font-medium pt-4">Carlos Hernandez</div>
             <div className="text-sm">Marketing Director, Palium Software</div>
           </div>
-          </div>
         </div>
-     
+      </div>
     </>
   );
 };

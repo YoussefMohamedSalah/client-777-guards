@@ -31,8 +31,8 @@ const Header = ({ lang, tMenu }: Props) => {
   }, []);
 
   const navbarClasses = `
-    flex items-center justify-between space-x-10 bg-white h-14
-    sticky top-0 z-50 border-b border-gray-200
+    flex items-center justify-between space-x-10 bg-secondary h-14
+    sticky top-0 z-50 border-b border-gray-600
   `;
 
   return (
@@ -42,7 +42,7 @@ const Header = ({ lang, tMenu }: Props) => {
           <Logo />
           <Menu tMenu={tMenu} lang={lang} />
         </div>
-        <ActionButtons lang={lang} tContactUs={tMenu.contact_us} />
+        <ActionButtons lang={lang} tContactUs={tMenu.contact_us} tMenu={tMenu} />
       </div>
     </div>
   );

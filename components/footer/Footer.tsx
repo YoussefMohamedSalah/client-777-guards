@@ -40,7 +40,7 @@ const Footer = ({ tMenu, lang }: Props) => {
 	];
 
 	return (
-		<div className="border-t border-gray-200 mt-10">
+		<div className="border-t border-gray-600 mt-10">
 			<div className="container my-6">
 				<div className="lg:grid lg:grid-cols-12 lg:gap-x-8 md:px-0">
 					{/* MAP */}
@@ -54,7 +54,7 @@ const Footer = ({ tMenu, lang }: Props) => {
 								<div className="flex flex-col items-center space-x-2">
 									<Link href="/">
 										<Image
-											src="/logos/777-guards-logo.jpeg"
+											src="/logos/logopng.png"
 											width={150}
 											height={150}
 											alt="logo"

@@ -79,7 +79,7 @@ export const Menu = ({ tMenu, lang }: Props) => {
           <NavigationMenuTrigger>{tMenu.our_services}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="flex">
-              <ul className="grid  p-2 md:w-[400px]  lg:w-[250px] hover:cursor-pointer border-r">
+              <ul className="grid p-2 md:w-[400px] lg:w-[250px] hover:cursor-pointer border-r">
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <PiBookOpenTextLight className="text-2xl mr-2 text-red-600" />
                   <div className="">

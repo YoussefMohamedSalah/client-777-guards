@@ -11,9 +11,10 @@ import { usePathname, useRouter } from "../../../app/navigation";
 interface Props {
   lang: string;
   tContactUs: string;
+  tMenu: any;
 }
 
-const ActionButtons = ({ lang, tContactUs }: Props) => {
+const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
@@ -63,14 +64,14 @@ const ActionButtons = ({ lang, tContactUs }: Props) => {
       <div className=" items-center justify-center flex ">
         <div className="flex lg:space-x-4 items-center">
           <Link href={"/contact-us"} className="lg:flex items-center hidden">
-            <Button variant={"outline"} className="lg:flex items-center hidden border-none text-md">
+            <Button variant={"outline"} className="lg:flex items-center hidden border-none bg-accent text-md gap-1">
               {tContactUs}
             </Button>
           </Link>
         </div>
         <div className="font-thin lg:flex items-center hidden">|</div>
         <div className="flex lg:space-x-4 items-center px-4">
-          <ul className="flex flex-wrap  md:mx-0 gap-3">
+          <ul className="md:flex hidden flex-wrap md:mx-0 gap-3 ">
             {social?.map((item) => (
               <li className="transition hover:opacity-80" key={`social-list--key${item.id}`}>
                 <Link href={item.path ? item.path : "/#"} target="_blank" rel="noreferrer">
@@ -93,17 +94,17 @@ const ActionButtons = ({ lang, tContactUs }: Props) => {
             {lang === "ar" ? (
               <Button
                 variant={"outline"}
-                className="lg:flex items-center hidden border-none text-md fz16 gap-1"
+                className="lg:flex items-center hidden border-none text-md fz16 gap-1 bg-accent"
                 onClick={() => handleChange("en")}>
-                <Image width={10} height={10} src="/assets/en.png" className="flag-icon img-fluid" alt="English" />
+                <Image width={14} height={14} src="/assets/en.png" className="flag-icon img-fluid" alt="English" />
                 English
               </Button>
             ) : (
               <Button
                 variant={"outline"}
-                className="lg:flex items-center hidden border-none text-md fz16 gap-1"
+                className="lg:flex items-center hidden border-none text-md fz16 gap-1 bg-accent"
                 onClick={() => handleChange("ar")}>
-                <Image width={10} height={10} src="/assets/ar.png" className="flag-icon img-fluid" alt="Arabic" />
+                <Image width={14} height={14} src="/assets/ar.png" className="flag-icon img-fluid" alt="Arabic" />
                 العربية
               </Button>
             )}
@@ -136,7 +137,7 @@ const ActionButtons = ({ lang, tContactUs }: Props) => {
         </div>
       )}
 
-      {isDropdownVisible && <DropdownMenu onClose={closeDropdown} />}
+      {isDropdownVisible && <DropdownMenu onClose={closeDropdown} tMenu={tMenu} />}
     </div>
   );
 };

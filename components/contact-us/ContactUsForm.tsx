@@ -145,7 +145,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
             <div className="flex items-center gap-4">
               <Button
                 type="submit"
-                className="text-sm font-light"
+                className="text-sm font-light text-gray-300 hover:text-black"
                 disabled={loading}
                 onClick={() => form.handleSubmit(onSubmit)}>
                 {tContactUs.submit}
@@ -154,7 +154,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
           </form>
         ) : (
           <>
-            <div className=" text-xl md:text-2xl flex items-center justify-center flex-col px-8">
+            <div className="text-xl md:text-2xl flex items-center justify-center flex-col px-8">
               <div className="w-80">
                 {/* <Image
                   src="/assets/MeditatingDoodle.svg"
@@ -164,7 +164,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
                   className="mx-auto"
                 /> */}
 
-                <div className="text-gray-500 font-light  text-center justify-center mx-auto py-10">
+                <div className="text-gray-300 font-light  text-center justify-center mx-auto py-10">
                   We&apos;ve received your inquiry and will be contacting you via email or mobile shortly.
                 </div>
               </div>

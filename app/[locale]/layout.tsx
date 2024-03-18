@@ -28,7 +28,7 @@ export default function RootLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} dir={getDirection(locale)}>
+    <html lang={locale} dir={getDirection(locale)} className="dark">
       <body className={font.className}>
         <HeaderWrapper lang={String(locale)} />
         {children}

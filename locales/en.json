@@ -1,7 +1,7 @@
 {
   "Menu": {
     "home": "Home",
-    "about-us": "About 777-Guards",
+    "about-us": "About 777 Guards",
     "our-services": "Our services",
     "jobs": "Jobs",
     "contact-us": "Contact us",
@@ -41,5 +41,41 @@
     "others":"Others",
     "your-message":"Your message?",
     "submit" :"Submit"
+  },
+
+
+  "AboutUsPage": {
+    "about": "About",
+    "main-section-title" : "We are here to provide Comprehensive 24/7 Security Services Ensuring Safety and Compliance",
+    "main-section-description" : "We offer comprehensive security services around the clock, 24 hours a day, with full compliance with service requirements and standards. We guarantee that our security services provide a safe environment for all our employees and valued visitors through a strong presence and high efficiency. The aim of our security services is to prevent harm and risks, whether physical injuries or thefts, and to control the movement of entry and exit from any facility.",
+
+    "our-services" : "Our services",
+  
+    "service-1-title" : "Security Systems Services.",
+    "service-1-desc" : "Electronic Surveillance (Cameras) and Early Fire Alarm Systems, X-ray Detection Devices, Indoor Access Control Systems, Perimeter Protection Devices, and various integrated security solutions, The company comprises a team of competent engineers and skilled technicians experienced in various security technologies.",
+
+
+    "service-2-title" : "Security and Surveillance Services.",
+    "service-2-desc" : "Comprehensive Security and Management Services for Public Institutions, Private Enterprises, Malls, Hospitals, Clubs, Tourist Villages, Banks, and Hotels, both interior and exterior, including towers and warehouses.",
+
+
+    "service-3-title" : "Security Consulting Services.",
+    "service-3-desc" : "Our security consulting services help our valued clients by providing clear insight into security developments in the region and developing appropriate security plans. This assists in pre-planning for business expansion and reducing security risks with proper prior planning. It includes risk analysis, evaluation, and preventive measures to mitigate security risks.",
+
+
+    "service-4-title" : "Events and VIP Personal Services.",
+    "service-4-desc" : "We provide comprehensive event planning and management services for both public and private occasions, We also offer special protection for high-profile individuals and provide secure car convoys. Our company delivers this service with specifically trained personnel, ensuring high standards of security. Our team includes former officers with expertise in convoy management.",
+
+
+    "service-5-title" : "Specialized K9 Security Services.",
+    "service-5-desc" : "This service provides trained and specialized dogs for inspection purposes. These dogs undergo training by a specialized team following guidelines set by the Ministry of Interior and other relevant authorities. These dogs are tailored to meet client requirements, adhering to specific instructions for explosive detection, drug detection, riot control, and search and rescue operations.",
+
+
+    "founded":"Founded",
+    "founded-message":"An Egyptian company compliant with Law No. 151 of the year 1981, based on internationally accredited courses to achieve the highest levels of security and stability in serving individuals and establishments under the supervision of specialized professionals in security and safety management. With experience exceeding 22 years.",
+  
+    "our-mission" : "Our Mission",
+    "our-mission-message" : "Protecting the lives and properties of clients and effectively managing emergency situations using the latest security and technological methods."
   }
+
 }

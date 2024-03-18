@@ -1,31 +1,20 @@
 "use client";
 
 import { useState } from "react";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { useForm } from "react-hook-form";
-
 import * as z from "zod";
-
 import { Computer, ScreenShare, Share, Smile } from "lucide-react";
-
 import Image from "next/image";
-
 import { Checkbox } from "@/components/ui/checkbox";
-
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-
 import { Button } from "@/components/ui/button";
-
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-
 import { Input } from "@/components/ui/input";
-
 import { useToast } from "@/components/ui/use-toast";
-
 import { Textarea } from "@/components/ui/textarea";
 import { PiCheckLight } from "react-icons/pi";
+import { getDirection } from "@/utils/getDirection";
 
 const FormSchema = z.object({
   full_name: z.string(),
@@ -42,7 +31,12 @@ type FormValues = {
   terms: boolean;
 };
 
-export default function ContactUsForm() {
+interface Props {
+  tContactUs: any;
+  lang: string;
+}
+
+export default function ContactUsForm({ tContactUs, lang }: Props) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
@@ -82,7 +76,7 @@ export default function ContactUsForm() {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full mx-4">
       <Form {...form}>
         {!submitted ? (
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -91,7 +85,7 @@ export default function ContactUsForm() {
               name="full_name"
               render={({ field }) => (
                 <FormItem className="items-center justify-center w-full">
-                  <FormLabel className="text-sm">Full name *</FormLabel>
+                  <FormLabel className="text-sm">{tContactUs.full_name} *</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -103,7 +97,7 @@ export default function ContactUsForm() {
               name="email"
               render={({ field }) => (
                 <FormItem className="items-center justify-center w-full">
-                  <FormLabel className="text-sm">Email *</FormLabel>
+                  <FormLabel className="text-sm">{tContactUs.email} *</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -115,20 +109,20 @@ export default function ContactUsForm() {
               name="subject"
               render={({ field }) => (
                 <FormItem className="items-center justify-center  w-full">
-                  <FormLabel className="w-60 text-sm   ">How can we help ?</FormLabel>
+                  <FormLabel className="w-60 text-sm">{tContactUs.how_to_help}</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger>
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent>
+                    <SelectContent dir={getDirection(lang)}>
                       <div className="flex gap-4">
-                        <SelectItem value="Get prices">Get Prices</SelectItem>
+                        <SelectItem value="Get prices">{tContactUs.get_prices}</SelectItem>
                       </div>
-                      <SelectItem value="Arrange Call">Arrange Call</SelectItem>
-                      <SelectItem value="Know more about 777-guards">Know more about 777-guards</SelectItem>
-                      <SelectItem value="Other">Other</SelectItem>
+                      <SelectItem value="Arrange Call">{tContactUs.arrange_meeting}</SelectItem>
+                      <SelectItem value="Know more about 777-guards">{tContactUs.know_more}</SelectItem>
+                      <SelectItem value="Other">{tContactUs.others}</SelectItem>
                     </SelectContent>
                   </Select>
                 </FormItem>
@@ -140,7 +134,7 @@ export default function ContactUsForm() {
               name="info"
               render={({ field }) => (
                 <FormItem className="items-center justify-center w-full">
-                  <FormLabel className="w-60 text-sm">Your message ?</FormLabel>
+                  <FormLabel className="w-60 text-sm">{tContactUs.your_message}</FormLabel>
                   <FormControl>
                     <Textarea style={{ height: "100px" }} {...field} />
                   </FormControl>
@@ -154,7 +148,7 @@ export default function ContactUsForm() {
                 className="text-sm font-light"
                 disabled={loading}
                 onClick={() => form.handleSubmit(onSubmit)}>
-                Submit
+                {tContactUs.submit}
               </Button>
             </div>
           </form>

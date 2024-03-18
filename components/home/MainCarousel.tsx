@@ -26,10 +26,10 @@ const MainCarousel = () => {
 
   const data = [
     {
-      url: "/images/banner3-1-1024x376.jpg",
+      url: "/assets/banner1.png",
     },
     {
-      url: "/images/banner3-1-1024x376.jpg",
+      url: "/assets/banner2.jpg",
     },
     {
       url: "/images/banner3-1-1024x376.jpg",

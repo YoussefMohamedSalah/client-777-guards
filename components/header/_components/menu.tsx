@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { PiBookOpenTextLight, PiFileThin, PiSparkleLight, PiTargetLight } from "react-icons/pi";
+import { getDirection } from "@/utils/getDirection";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -52,25 +53,30 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function Menu() {
+interface Props {
+  tMenu: any;
+  lang: string;
+}
+
+export const Menu = ({ tMenu, lang }: Props) => {
   return (
-    <NavigationMenu className="hidden lg:flex">
+    <NavigationMenu className="hidden lg:flex" dir={getDirection(lang)}>
       <NavigationMenuList>
         {/* Start */}
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Home</NavigationMenuLink>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.home}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         {/* Normal */}
         <NavigationMenuItem>
           <Link href="/about-us" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>About 777-guards</NavigationMenuLink>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.about_us}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         {/* With children */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Our services</NavigationMenuTrigger>
+          <NavigationMenuTrigger>{tMenu.our_services}</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="flex">
               <ul className="grid  p-2 md:w-[400px]  lg:w-[250px] hover:cursor-pointer border-r">
@@ -136,7 +142,7 @@ export function Menu() {
         {/* children end */}
         <NavigationMenuItem>
           <Link href="/jobs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>Jobs</NavigationMenuLink>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.jobs}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         {/* Normal */}

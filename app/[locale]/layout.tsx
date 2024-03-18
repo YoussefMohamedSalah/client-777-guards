@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer";
+import HeaderWrapper from "@/components/header/HeaderWrapper";
+import FooterWrapper from "@/components/footer/FooterWrapper";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { getDirection } from "@/utils/getDirection";
@@ -30,9 +30,9 @@ export default function RootLayout({ children, params }: Props) {
   return (
     <html lang={locale} dir={getDirection(locale)}>
       <body className={font.className}>
-        <Navbar lang={String(locale)} />
+        <HeaderWrapper lang={String(locale)} />
         {children}
-        <Footer />
+        <FooterWrapper />
       </body>
     </html>
   );

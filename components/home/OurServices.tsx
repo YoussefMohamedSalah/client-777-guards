@@ -2,65 +2,27 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 
-const tabs = [
-	{
-		id: 1,
-		name: "Facility protection.",
-		image: "/images/sample.jpeg",
-	},
-	{
-		id: 2,
-		name: "Personal protection.",
-		image: "/images/sample.jpeg",
-	},
-	{
-		id: 3,
-		name: "Support, intervention and security consultations.",
-		image: "/images/sample.jpeg",
-	},
-	{
-		id: 4,
-		name: "Industrial security.",
-		image: "/images/sample.jpeg",
-	},
-	{
-		id: 5,
-		name: "Public event security.",
-		image: "/images/sample.jpeg",
-	},
-	{
-		id: 6,
-		name: "Women's security.",
-		image: "/images/sample.jpeg",
-	},
-	{
-		id: 7,
-		name: "Guard dogs.",
-		image: "/images/sample.jpeg",
-	},
-	{
-		id: 8,
-		name: "Training in safety and occupational health.",
-		image: "/images/sample.jpeg",
-	},
-];
+interface Props {
+	tServices: any;
+	lang: string;
+	servicesTabs: any[];
+}
 
-const OurServices = () => {
-	const ref = useRef(null);
-	const [activeTab, setActiveTab] = useState(tabs[0]);
+const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
+	const [activeTab, setActiveTab] = useState(servicesTabs[0]);
 	const isSmallScreen = useMediaQuery({ maxWidth: 767 });
+
 
 	return (
 		<div className="md:items-center flex container">
 			{isSmallScreen ? (
 				<div className="xl:px-8">
 					<div className="flex flex-col md:row-span-1 gap-2 xl:gap-6 mt-8 xl:px-0">
-						<p className="text-2xl pt-4 text-start mx-auto">Our services contain.</p>
-						{tabs.map((tab, index: number) => (
+						<p className="text-2xl pt-4 text-start mx-auto">{tServices.our_services}</p>
+						{servicesTabs.map((tab, index: number) => (
 							<motion.div
 								key={index}
 								className={`flex p-1 md:p-8 cursor-pointer
@@ -93,8 +55,8 @@ const OurServices = () => {
 				</div>
 			) : (
 				<div className="flex flex-col xl:space-x-4 items-start justify-between hover:cursor-pointer gap-4 w-4/5 xl:w-3/4 2xl:w-[55%]">
-					<p className="text-2xl pt-4 text-start mx-auto">Our services contain.</p>
-					{tabs.map((tab, index: number) => (
+					<p className="text-2xl pt-4 text-start mx-auto">{tServices.our_services}</p>
+					{servicesTabs.map((tab, index: number) => (
 						<motion.div
 							key={index}
 							className={`xl:flex justify-start space-x-4 xl:mt-4 sm:my-10 xl:my-0 ${activeTab === tab ? "text-[#001b96]" : "text-black m"}`}
@@ -109,7 +71,7 @@ const OurServices = () => {
 								<motion.div
 									className="flex flex-col text-sm"
 									initial={{ x: 0 }}
-									animate={{ x: activeTab === tab ? 25 : 10 }}
+									animate={{ x: activeTab === tab ? (lang === "ar" ? -25 : 25) : (lang === "ar" ? -10 : 10) }}
 									transition={{ duration: 0.2 }}>
 									<div>
 										{/* Only animate the name */}

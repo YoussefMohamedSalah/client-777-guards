@@ -10,9 +10,10 @@ import { usePathname, useRouter } from "../../../app/navigation";
 
 interface Props {
   lang: string;
+  tContactUs: string;
 }
 
-const ActionButtons = ({ lang }: Props) => {
+const ActionButtons = ({ lang, tContactUs }: Props) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
@@ -71,7 +72,7 @@ const ActionButtons = ({ lang }: Props) => {
         <div className="flex lg:space-x-4 items-center">
           <Link href={"/contact-us"} className="lg:flex items-center hidden">
             <Button variant={"outline"} className="lg:flex items-center hidden border-none text-md">
-              Contact us
+              {tContactUs}
             </Button>
           </Link>
         </div>

@@ -10,10 +10,14 @@ import AboutUsSection from "./about-us-section";
 import MainCarousel from "../../../components/home/MainCarousel";
 import HomeWrapper from "@/components/home/HomeWrapper";
 
-const LandingPage = () => {
+interface Props {
+  params: { locale: string };
+}
+
+const LandingPage = ({ params: { locale } }: Props) => {
   return (
     <div className="">
-      <HomeWrapper />
+      <HomeWrapper lang={locale} />
     </div>
   );
 };

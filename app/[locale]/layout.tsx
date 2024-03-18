@@ -32,7 +32,7 @@ export default function RootLayout({ children, params }: Props) {
       <body className={font.className}>
         <HeaderWrapper lang={String(locale)} />
         {children}
-        <FooterWrapper />
+        <FooterWrapper lang={String(locale)} />
       </body>
     </html>
   );

@@ -34,7 +34,7 @@ const ActionButtons = ({ lang, tContactUs }: Props) => {
   const social = [
     {
       id: 1,
-      path: "https://www.facebook.com/",
+      path: "https://www.facebook.com/profile.php?id=61556189053260&mibextid=ibOpuV",
       image: "/assets/social/facebook.svg",
       name: "facebook",
       width: 20,
@@ -42,28 +42,20 @@ const ActionButtons = ({ lang, tContactUs }: Props) => {
     },
     {
       id: 2,
-      path: "https://twitter.com/",
-      image: "/assets/social/twitter.svg",
-      name: "twitter",
+      path: "https://www.tiktok.com/@777guards.securit?_t=8khOS9cHtIM&_r=1",
+      image: "/assets/social/tiktok.svg",
+      name: "tiktok",
       width: 20,
       height: 20,
     },
     {
       id: 3,
-      path: "https://www.instagram.com/",
+      path: "https://www.instagram.com/777.guards/?igsh=aGI5ZjJpMDc5ZXA4&utm_source=qr",
       image: "/assets/social/instagram.svg",
       name: "instagram",
       width: 20,
       height: 20,
-    },
-    {
-      id: 4,
-      path: "https://www.youtube.com/",
-      image: "/assets/social/youtube.svg",
-      name: "youtube",
-      width: 20,
-      height: 20,
-    },
+    }
   ];
 
   return (

@@ -31,17 +31,17 @@ const HomeWrapper = ({ lang }: Props) => {
 		{
 			id: 2,
 			name: `${tServices.service_2}`,
-			image: "/images/sample.jpeg",
+			image: "/images/sample2.jpeg",
 		},
 		{
 			id: 3,
 			name: `${tServices.service_3}`,
-			image: "/images/sample.jpeg",
+			image: "/images/sample3.jpeg",
 		},
 		{
 			id: 4,
 			name: `${tServices.service_4}`,
-			image: "/images/sample.jpeg",
+			image: "/images/sample4.jpeg",
 		},
 		{
 			id: 5,
@@ -51,17 +51,17 @@ const HomeWrapper = ({ lang }: Props) => {
 		{
 			id: 6,
 			name: `${tServices.service_6}`,
-			image: "/images/sample.jpeg",
+			image: "/images/sample2.jpeg",
 		},
 		{
 			id: 7,
 			name: `${tServices.service_7}`,
-			image: "/images/sample.jpeg",
+			image: "/images/sample3.jpeg",
 		},
 		{
 			id: 8,
 			name: `${tServices.service_8}`,
-			image: "/images/sample.jpeg",
+			image: "/images/sample4.jpeg",
 		},
 	];
 

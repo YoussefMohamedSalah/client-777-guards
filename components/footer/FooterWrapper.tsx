@@ -2,7 +2,11 @@ import React from 'react'
 import { useTranslations } from "next-intl";
 import Footer from './Footer';
 
-const FooterWrapper = () => {
+interface Props {
+    lang: string;
+}
+
+const FooterWrapper = ({ lang }: Props) => {
     const t = useTranslations("Menu");
 
     const tMenu = {
@@ -18,7 +22,7 @@ const FooterWrapper = () => {
 
     return (
         <>
-            <Footer tMenu={tMenu} />
+            <Footer tMenu={tMenu} lang={lang} />
         </>
     )
 }

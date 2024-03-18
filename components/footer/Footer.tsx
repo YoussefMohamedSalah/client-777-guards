@@ -3,19 +3,19 @@ import LocationMap from "./locationMap";
 import Link from "next/link";
 import { LiaMobileAltSolid } from "react-icons/lia";
 import { MdAlternateEmail } from "react-icons/md";
-import { FiPhone } from "react-icons/fi";
 import { GiRotaryPhone } from "react-icons/gi";
 
 interface Props {
 	tMenu: any;
+	lang: string;
 }
 
-const Footer = ({ tMenu }: Props) => {
+const Footer = ({ tMenu, lang }: Props) => {
 
 	const social = [
 		{
 			id: 1,
-			path: "https://www.facebook.com/",
+			path: "https://www.facebook.com/profile.php?id=61556189053260&mibextid=ibOpuV",
 			image: "/assets/social/facebook.svg",
 			name: "facebook",
 			width: 20,
@@ -23,28 +23,20 @@ const Footer = ({ tMenu }: Props) => {
 		},
 		{
 			id: 2,
-			path: "https://twitter.com/",
-			image: "/assets/social/twitter.svg",
-			name: "twitter",
+			path: "https://www.tiktok.com/@777guards.securit?_t=8khOS9cHtIM&_r=1",
+			image: "/assets/social/tiktok.svg",
+			name: "tiktok",
 			width: 20,
 			height: 20,
 		},
 		{
 			id: 3,
-			path: "https://www.instagram.com/",
+			path: "https://www.instagram.com/777.guards/?igsh=aGI5ZjJpMDc5ZXA4&utm_source=qr",
 			image: "/assets/social/instagram.svg",
 			name: "instagram",
 			width: 20,
 			height: 20,
-		},
-		{
-			id: 4,
-			path: "https://www.youtube.com/",
-			image: "/assets/social/youtube.svg",
-			name: "youtube",
-			width: 20,
-			height: 20,
-		},
+		}
 	];
 
 	return (
@@ -69,13 +61,6 @@ const Footer = ({ tMenu }: Props) => {
 											className="w-18 pb-3"
 										/>
 									</Link>
-									{/* <div className="flex space-x-2">
-                    <PiInstagramLogoFill className="text-2xl text-gray-500" />
-                    <PiTwitterLogoFill className="text-2xl text-gray-500" />
-                    <PiFacebookLogoFill className="text-2xl text-gray-500" />
-                    <PiYoutubeLogoFill className="text-2xl text-gray-500" />
-                    <PiLinkedinLogoFill className="text-2xl text-gray-500" />
-                  </div> */}
 
 									<ul className="flex flex-wrap space-s-4 md:space-s-5 mx-auto md:mx-0 gap-3 pt-2">
 										{social?.map((item) => (
@@ -99,23 +84,31 @@ const Footer = ({ tMenu }: Props) => {
 					<div className="lg:col-span-4">
 						<div className="lg:grid lg:grid-cols-12">
 							<div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
-								<div className="text-lg  xl:text-[18px] xl:leading-6 font-bold">{tMenu.contacts}</div>
+								<div className="text-lg  xl:text-[18px] xl:leading-6 font-bold" >{tMenu.contacts}</div>
 								<div className="font-light space-y-4 text-sm">
 									<div className="flex items-center">
-										<MdAlternateEmail className="text-2xl text-gray-500" />
-										<span className="ml-2">test@mail.com</span>
+										<MdAlternateEmail className="text-2xl me-1 text-gray-500" />
+										<span className="ml-2">
+											<a href="mailto:threesevensguards777@gmail.com">threesevensguards777</a>
+										</span>
 									</div>
 									<div className="flex items-center">
-										<FiPhone className="text-2xl text-gray-500" />
-										<span className="ml-2">01069963165</span>
+										<LiaMobileAltSolid className="text-2xl me-1 text-gray-500" />
+										<span className="ml-2">
+											<a href="tel:01098884593">01098884593</a>
+										</span>
 									</div>
 									<div className="flex items-center">
-										<LiaMobileAltSolid className="text-2xl text-gray-500" />
-										<span className="ml-2">01069963165</span>
+										<LiaMobileAltSolid className="text-2xl me-1 text-gray-500" />
+										<span className="ml-2">
+											<a href="tel:01000131662">01000131662</a>
+										</span>
 									</div>
 									<div className="flex items-center">
-										<GiRotaryPhone className="text-2xl text-gray-500" />
-										<span className="ml-2">01069963165</span>
+										<GiRotaryPhone className="text-2xl me-1 text-gray-500" />
+										<span className="ml-2">
+											<a href="tel:0223820622">0223820622</a>
+										</span>
 									</div>
 								</div>
 							</div>

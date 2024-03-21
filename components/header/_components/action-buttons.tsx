@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { X, AlignJustify } from "lucide-react";
@@ -15,6 +15,7 @@ interface Props {
 }
 
 const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
+  const [social, setSocial] = useState<any[]>([])
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
@@ -32,32 +33,54 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
     router.push(pathname, { locale: lang });
   };
 
-  const social = [
-    {
-      id: 1,
-      path: "https://www.facebook.com/profile.php?id=61556189053260&mibextid=ibOpuV",
-      image: "/assets/social/facebook.svg",
-      name: "facebook",
-      width: 20,
-      height: 20,
-    },
-    {
-      id: 2,
-      path: "https://www.tiktok.com/@777guards.securit?_t=8khOS9cHtIM&_r=1",
-      image: "/assets/social/tiktok.svg",
-      name: "tiktok",
-      width: 20,
-      height: 20,
-    },
-    {
-      id: 3,
-      path: "https://www.instagram.com/777.guards/?igsh=aGI5ZjJpMDc5ZXA4&utm_source=qr",
-      image: "/assets/social/instagram.svg",
-      name: "instagram",
-      width: 20,
-      height: 20,
+  useEffect(() => {
+    fetchWebsiteData();
+  }, [])
+
+  const fetchWebsiteData = async () => {
+    try {
+      let res = await fetch('http://localhost:8080/api/website/777-guards');
+      if (!res.ok) {
+        throw new Error('Network response was not ok');
+      }
+      let data = await res.json();
+      let socialData = []
+      if (data.facebook) {
+        socialData.push({
+          id: 1,
+          path: `${data.facebook}`,
+          image: "/assets/social/facebook.svg",
+          name: "facebook",
+          width: 20,
+          height: 20,
+        })
+      }
+      if (data.tiktok) {
+        socialData.push({
+          id: 2,
+          path: `${data.tiktok}`,
+          image: "/assets/social/tiktok.svg",
+          name: "tiktok",
+          width: 20,
+          height: 20,
+        })
+      }
+      if (data.instagram) {
+        socialData.push({
+          id: 2,
+          path: `${data.instagram}`,
+          image: "/assets/social/instagram.svg",
+          name: "instagram",
+          width: 20,
+          height: 20,
+        })
+      }
+      setSocial(socialData)
+      // You can further process the data here as needed
+    } catch (error) {
+      console.log('Error fetching website data:', error);
     }
-  ];
+  };
 
   return (
     <div className="pr-2">

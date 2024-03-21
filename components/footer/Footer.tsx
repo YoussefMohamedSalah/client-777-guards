@@ -1,9 +1,11 @@
+"use client"
 import Image from "next/image";
 import LocationMap from "./locationMap";
 import Link from "next/link";
 import { LiaMobileAltSolid } from "react-icons/lia";
 import { MdAlternateEmail } from "react-icons/md";
 import { GiRotaryPhone } from "react-icons/gi";
+import { useState, useEffect } from "react";
 
 interface Props {
 	tMenu: any;
@@ -11,33 +13,67 @@ interface Props {
 }
 
 const Footer = ({ tMenu, lang }: Props) => {
+	const [social, setSocial] = useState<any[]>([])
+	const [email, setEmail] = useState<string | null>(null)
+	const [phoneNumber1, setPhoneNumber1] = useState<string | null>(null)
+	const [phoneNumber2, setPhoneNumber2] = useState<string | null>(null)
+	const [landLine, setLandLine] = useState<string | null>(null)
 
-	const social = [
-		{
-			id: 1,
-			path: "https://www.facebook.com/profile.php?id=61556189053260&mibextid=ibOpuV",
-			image: "/assets/social/facebook.svg",
-			name: "facebook",
-			width: 20,
-			height: 20,
-		},
-		{
-			id: 2,
-			path: "https://www.tiktok.com/@777guards.securit?_t=8khOS9cHtIM&_r=1",
-			image: "/assets/social/tiktok.svg",
-			name: "tiktok",
-			width: 20,
-			height: 20,
-		},
-		{
-			id: 3,
-			path: "https://www.instagram.com/777.guards/?igsh=aGI5ZjJpMDc5ZXA4&utm_source=qr",
-			image: "/assets/social/instagram.svg",
-			name: "instagram",
-			width: 20,
-			height: 20,
+	useEffect(() => {
+		fetchWebsiteData();
+	}, [])
+
+	const fetchWebsiteData = async () => {
+		try {
+			let res = await fetch('http://localhost:8080/api/website/777-guards');
+			if (!res.ok) {
+				throw new Error('Network response was not ok');
+			}
+			let data = await res.json();
+
+			if (data.email) setEmail(data.email);
+			if (data.phone_number_1) setPhoneNumber1(data.phone_number_1);
+			if (data.phone_number_2) setPhoneNumber2(data.phone_number_2);
+			if (data.email) setEmail(data.email);
+			if (data.land_line) setLandLine(data.land_line);
+
+			let socialData = []
+			if (data.facebook) {
+				socialData.push({
+					id: 1,
+					path: `${data.facebook}`,
+					image: "/assets/social/facebook.svg",
+					name: "facebook",
+					width: 20,
+					height: 20,
+				})
+			}
+			if (data.tiktok) {
+				socialData.push({
+					id: 2,
+					path: `${data.tiktok}`,
+					image: "/assets/social/tiktok.svg",
+					name: "tiktok",
+					width: 20,
+					height: 20,
+				})
+			}
+			if (data.instagram) {
+				socialData.push({
+					id: 2,
+					path: `${data.instagram}`,
+					image: "/assets/social/instagram.svg",
+					name: "instagram",
+					width: 20,
+					height: 20,
+				})
+			}
+			setSocial(socialData)
+			// You can further process the data here as needed
+		} catch (error) {
+			console.log('Error fetching website data:', error);
 		}
-	];
+	};
 
 	return (
 		<div className="border-t border-gray-600 mt-10">
@@ -61,7 +97,6 @@ const Footer = ({ tMenu, lang }: Props) => {
 											className="w-18 pb-3"
 										/>
 									</Link>
-
 									<ul className="flex flex-wrap space-s-4 md:space-s-5 mx-auto md:mx-0 gap-3 pt-2">
 										{social?.map((item) => (
 											<li className="transition hover:opacity-80" key={`social-list--key${item.id}`}>
@@ -86,30 +121,38 @@ const Footer = ({ tMenu, lang }: Props) => {
 							<div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
 								<div className="text-lg  xl:text-[18px] xl:leading-6 font-bold" >{tMenu.contacts}</div>
 								<div className="font-light space-y-4 text-sm">
-									<div className="flex items-center">
-										<MdAlternateEmail className="text-2xl me-1 text-gray-500" />
-										<span className="ml-2">
-											<a href="mailto:threesevensguards777@gmail.com">threesevensguards777</a>
-										</span>
-									</div>
-									<div className="flex items-center">
-										<LiaMobileAltSolid className="text-2xl me-1 text-gray-500" />
-										<span className="ml-2">
-											<a href="tel:01098884593">01098884593</a>
-										</span>
-									</div>
-									<div className="flex items-center">
-										<LiaMobileAltSolid className="text-2xl me-1 text-gray-500" />
-										<span className="ml-2">
-											<a href="tel:01000131662">01000131662</a>
-										</span>
-									</div>
-									<div className="flex items-center">
-										<GiRotaryPhone className="text-2xl me-1 text-gray-500" />
-										<span className="ml-2">
-											<a href="tel:0223820622">0223820622</a>
-										</span>
-									</div>
+									{email && (
+										<div className="flex items-center">
+											<MdAlternateEmail className="text-2xl me-1 text-gray-500" />
+											<span className="ml-2">
+												<a href={`mailto:${email}`}>{email}</a>
+											</span>
+										</div>
+									)}
+									{phoneNumber1 && (
+										<div className="flex items-center">
+											<LiaMobileAltSolid className="text-2xl me-1 text-gray-500" />
+											<span className="ml-2">
+												<a href={`tel:${phoneNumber1}`}>{phoneNumber1}</a>
+											</span>
+										</div>
+									)}
+									{phoneNumber2 && (
+										<div className="flex items-center">
+											<LiaMobileAltSolid className="text-2xl me-1 text-gray-500" />
+											<span className="ml-2">
+												<a href={`tel:${phoneNumber2}`}>{phoneNumber2}</a>
+											</span>
+										</div>
+									)}
+									{landLine && (
+										<div className="flex items-center">
+											<GiRotaryPhone className="text-2xl me-1 text-gray-500" />
+											<span className="ml-2">
+												<a href={`tel:${landLine}`}>{landLine}</a>
+											</span>
+										</div>
+									)}
 								</div>
 							</div>
 							{/* FAST ACCESS */}

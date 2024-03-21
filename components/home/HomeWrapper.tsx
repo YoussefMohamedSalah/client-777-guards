@@ -19,7 +19,8 @@ const HomeWrapper = ({ lang }: Props) => {
 		service_5: `${t("service-5")}`,
 		service_6: `${t("service-6")}`,
 		service_7: `${t("service-7")}`,
-		service_8: `${t("service-8")}`
+		service_8: `${t("service-8")}`,
+		service_9: `${t("service-9")}`,
 	};
 
 	const servicesTabs = [
@@ -31,17 +32,17 @@ const HomeWrapper = ({ lang }: Props) => {
 		{
 			id: 2,
 			name: `${tServices.service_2}`,
-			image: "/images/sample2.jpeg",
+			image: "/images/sample3.jpeg",
 		},
 		{
 			id: 3,
 			name: `${tServices.service_3}`,
-			image: "/images/sample3.jpeg",
+			image: "/images/sample4.jpeg",
 		},
 		{
 			id: 4,
 			name: `${tServices.service_4}`,
-			image: "/images/sample4.jpeg",
+			image: "/images/sample3.jpeg",
 		},
 		{
 			id: 5,
@@ -51,16 +52,21 @@ const HomeWrapper = ({ lang }: Props) => {
 		{
 			id: 6,
 			name: `${tServices.service_6}`,
-			image: "/images/sample2.jpeg",
+			image: "/images/sample3.jpeg",
 		},
 		{
 			id: 7,
 			name: `${tServices.service_7}`,
-			image: "/images/sample3.jpeg",
+			image: "/images/sample.jpeg",
 		},
 		{
 			id: 8,
 			name: `${tServices.service_8}`,
+			image: "/images/sample4.jpeg",
+		},
+		{
+			id: 9,
+			name: `${tServices.service_9}`,
 			image: "/images/sample4.jpeg",
 		},
 	];

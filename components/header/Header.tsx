@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import ActionButtons from "./_components/action-buttons";
 import Logo from "./_components/logo";
 import { Menu } from "./_components/menu";
-import { getDirection } from "@/utils/getDirection";
 
 interface Props {
   lang: string;

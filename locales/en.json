@@ -11,17 +11,33 @@
   },
 
   "HomePage": {
-    "our-services-contain": "Our services contain",
-    "service-1": "Facility protection.",
-    "service-2": "Personal protection.",
-    "service-3": "Support, intervention and security consultations.",
-    "service-4": "Industrial security.",
-    "service-5": "Public event security.",
-    "service-6": "Women's security.",
-    "service-7": "Guard dogs.",
-    "service-8": "Training in safety and occupational health."
-  },
+    "our-services-contain": "Our services include",
+    "service-1": "Security companies",
+    "service-2": "Private security companies",
+    "service-3": "Transfer of insured funds",
+    "service-4": "Former military personnel",
+    "service-5": "Bodyguards",
+    "service-6": "Design of security systems",
+    "service-7": "Facility insurance",
+    "service-8": "Insurance for public figures",
+    "service-9": "Securing public events and secure transportation of valuables"
+  },  
 
+
+
+  "JobsPage": {
+    "available": "Available",
+    "closed": "Closed",
+    "experience": "Experience",
+    "salary": "Salary",
+    "location": "Location",
+    "shift": "Shift",
+    "education": "Education",
+    "skills": "Skills",
+    "duration": "Duration",
+    "count": "Count",
+    "month":"Month"
+  },  
 
 
   "ContactUsPage": {

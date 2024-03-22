@@ -9,7 +9,6 @@ export async function POST(req: Request) {
         first_name,
         last_name,
         email,
-
         company_name,
         help,
         company_size,

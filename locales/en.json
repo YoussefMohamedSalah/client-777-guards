@@ -36,7 +36,8 @@
     "skills": "Skills",
     "duration": "Duration",
     "count": "Count",
-    "month":"Month"
+    "month":"Month",
+    "join-us":"Join our dedicated team in safeguarding communities and ensuring the safety of individuals"
   },  
 
 
@@ -56,7 +57,13 @@
     "know-more":"Know more about 777-Guards.",
     "others":"Others",
     "your-message":"Your message?",
-    "submit" :"Submit"
+    "submit" :"Submit",
+    "contact-us-message" : " We have received your inquiry and will be contacting you via email or mobile shortly.",
+    "birthday" :"Birthday date",
+    "phone-number":"Phone number",
+    "start-date":"closest start date",
+    "address":"Address",
+    "apply-message" :"Thank you for applying to our job position. We will be in touch shortly to follow up on the process."
   },
 
 

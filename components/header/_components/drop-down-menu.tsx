@@ -70,8 +70,8 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose, tMenu }) => {
         type="single"
         collapsible>
         <AccordionItem className="mt-6 border-b" value="item-1">
-          <AccordionTrigger className="">Use Cases</AccordionTrigger>
-          <AccordionContent defaultValue="item-1" className="space-y-2">
+          <AccordionTrigger className="">{tMenu.our_services}</AccordionTrigger>
+          {/* <AccordionContent defaultValue="item-1" className="space-y-2">
             <Link href={"/team-alignment"} className="flex" onClick={handleLinkClick}>
               <div>
                 <UserPlus className="h-6 w-6 mr-4 text-orange-400" />
@@ -120,7 +120,7 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose, tMenu }) => {
 
               <div>Support</div>
             </Link>
-          </AccordionContent>
+          </AccordionContent> */}
         </AccordionItem>
         {/* <AccordionItem className=" border-b" value="item-2">
           <AccordionTrigger>For Business</AccordionTrigger>

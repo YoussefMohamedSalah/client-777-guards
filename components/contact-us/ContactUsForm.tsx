@@ -13,7 +13,6 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
-import { PiCheckLight } from "react-icons/pi";
 import { getDirection } from "@/utils/getDirection";
 
 const FormSchema = z.object({
@@ -54,7 +53,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       setLoading(true);
-      const res = await fetch("/api/contact", {
+      const res = await fetch("http://localhost:8080/api/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -76,7 +75,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
   }
 
   return (
-    <div className="w-full mx-4">
+    <div className="w-full px-2">
       <Form {...form}>
         {!submitted ? (
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -156,16 +155,8 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
           <>
             <div className="text-xl md:text-2xl flex items-center justify-center flex-col px-8">
               <div className="w-80">
-                {/* <Image
-                  src="/assets/MeditatingDoodle.svg"
-                  alt="logo"
-                  width={1000}
-                  height={1000}
-                  className="mx-auto"
-                /> */}
-
                 <div className="text-gray-300 font-light  text-center justify-center mx-auto py-10">
-                  We&apos;ve received your inquiry and will be contacting you via email or mobile shortly.
+                  {tContactUs.contact_message}
                 </div>
               </div>
             </div>

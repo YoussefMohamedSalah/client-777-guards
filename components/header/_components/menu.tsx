@@ -77,7 +77,7 @@ export const Menu = ({ tMenu, lang }: Props) => {
         {/* With children */}
         <NavigationMenuItem>
           <NavigationMenuTrigger>{tMenu.our_services}</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          {/* <NavigationMenuContent>
             <div className="flex">
               <ul className="grid p-2 md:w-[400px] lg:w-[250px] hover:cursor-pointer border-r">
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
@@ -137,7 +137,7 @@ export const Menu = ({ tMenu, lang }: Props) => {
                 </ul>
               </div>
             </div>
-          </NavigationMenuContent>
+          </NavigationMenuContent> */}
         </NavigationMenuItem>
         {/* children end */}
         <NavigationMenuItem>

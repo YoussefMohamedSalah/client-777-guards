@@ -18,7 +18,6 @@ const ContactUsWrapper = ({ lang }: Props) => {
     info_one: `${t("info-one")}`,
     info_two: `${t("info-two")}`,
     info_three: `${t("info-three")}`,
-
     full_name: `${t("full-name")}`,
     email: `${t("email")}`,
     how_to_help: `${t("how-to-help")}`,
@@ -28,6 +27,7 @@ const ContactUsWrapper = ({ lang }: Props) => {
     others: `${t("others")}`,
     your_message: `${t("your-message")}`,
     submit: `${t("submit")}`,
+    contact_message: `${t("contact-us-message")}`,
   };
 
 

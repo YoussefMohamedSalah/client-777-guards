@@ -13,7 +13,6 @@ const JobsWrapper = ({ jobsData, lang }: Props) => {
     const t = useTranslations("JobsPage");
 
     const tJob = {
-        our_services: `${t("our-services-contain")}`,
         available: `${t("available")}`,
         closed: `${t("closed")}`,
         experience: `${t("experience")}`,
@@ -39,8 +38,6 @@ const JobsWrapper = ({ jobsData, lang }: Props) => {
                     )
                 })}
             </div>
-            {/* <MainCarousel />
-			<OurServices lang={lang} tServices={tServices} servicesTabs={servicesTabs} /> */}
         </section>
     );
 };

@@ -15,7 +15,7 @@ export const metadata = {
 
 async function getSingleJob(id: string) {
     try {
-        let res = await fetch(`http://localhost:8080/api/jobs/${id}`);
+        let res = await fetch(`${process.env.NEXT_PUBLIC_REST_API_ENDPOINT}/api/jobs/${id}`);
         if (!res.ok) {
             throw new Error('Network response was not ok');
         }

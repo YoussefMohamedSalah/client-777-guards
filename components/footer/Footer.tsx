@@ -25,7 +25,7 @@ const Footer = ({ tMenu, lang }: Props) => {
 
 	const fetchWebsiteData = async () => {
 		try {
-			let res = await fetch('http://localhost:8080/api/website/777-guards');
+			let res = await fetch(`${process.env.NEXT_PUBLIC_REST_API_ENDPOINT}/api/website/777-guards`);
 			if (!res.ok) {
 				throw new Error('Network response was not ok');
 			}

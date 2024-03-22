@@ -53,7 +53,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:8080/api/contact/", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_REST_API_ENDPOINT}/api/contact/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

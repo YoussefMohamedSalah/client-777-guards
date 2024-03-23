@@ -43,7 +43,7 @@ const MainCarousel = () => {
           <Carousel
             responsive={SINGLE_ITEM_BREAKPOINTS}
             additionalTransfrom={0}
-            arrows
+            arrows={false}
             autoPlaySpeed={3000}
             centerMode={false}
             className=""
@@ -69,17 +69,17 @@ const MainCarousel = () => {
             swipeable>
             {data.map((banner: any, index: number) => {
               return (
-                <a key={index} className="flex justify-center items-center w-100">
+                <a key={index} className="flex justify-center items-center w-100 mx-1 ">
                   <Image
                     style={{
-                      maxHeight: "500px",
+                      maxHeight: "450px",
                       minHeight: "220px",
                     }}
                     className="img-fluid rounded-md"
                     src={banner.url}
                     alt="security"
                     width={2170}
-                    height={500}
+                    height={450}
                     quality={100}
                   />
                 </a>

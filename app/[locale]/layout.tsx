@@ -10,7 +10,7 @@ import { getDirection } from "@/utils/getDirection";
 const font = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "777-Guards",
+  title: "777 Guards",
   description: "Bird - Simple and powerful notes & docs for teams",
 };
 

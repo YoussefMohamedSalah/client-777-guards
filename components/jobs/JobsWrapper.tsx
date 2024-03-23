@@ -1,8 +1,9 @@
 import React from "react";
-// import MainCarousel from "./MainCarousel";
-// import OurServices from "./OurServices";
+import { PiArrowLeft, PiArrowRight } from "react-icons/pi";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import JobCard from "./JobCard";
+import Link from "next/link";
 
 interface Props {
     jobsData: any[];
@@ -24,19 +25,37 @@ const JobsWrapper = ({ jobsData, lang }: Props) => {
         duration: `${t("duration")}`,
         count: `${t("count")}`,
         month: `${t("month")}`,
+        back: `${t("back-to-home")}`,
+        no_jobs_title: `${t("no-jobs-title")}`,
+        no_jobs_desc: `${t("no-jobs-desc")}`,
     };
 
 
     return (
         <section>
             <div className="md:items-center flex flex-col container pt-5">
-                {jobsData && jobsData?.map((job, index: number) => {
+                {jobsData && jobsData.length > 0 ? jobsData?.map((job, index: number) => {
                     return (
                         <div key={index} className="w-full m-5">
                             <JobCard job={job} tJob={tJob} lang={lang} />
                         </div>
                     )
-                })}
+                }) : (
+                    <div className="md:items-center flex flex-col container pt-5 h-[58vh]">
+                        <div className="py-20 xl:py-20 flex justify-center items-center flex-col">
+                            <Link href="/">
+                                <Image src="/logos/logopng.png" alt="hero image" width={1000} height={1000} className="w-40 pb-10" />
+                            </Link>
+                            <div className="text-4xl xl:text-5xl font-medium  text-center">{tJob.no_jobs_title}</div>
+                            <div className="py-4 xl:w-2/3  text-center px-10">
+                                {tJob.no_jobs_desc}
+                            </div>
+                            <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer">
+                                {tJob.back} {lang === "en" ? <PiArrowRight className="ml-3 text-sm" /> : <PiArrowLeft className="ms-3 text-sm" />}
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </section>
     );

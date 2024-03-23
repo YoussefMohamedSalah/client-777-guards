@@ -15,12 +15,23 @@ interface Props {
 }
 
 const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
+  // const [initialized, setInitialized] = useState<boolean>(false)
+
   const [social, setSocial] = useState<any[]>([])
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
+
+  // useEffect(() => {
+  //   if (!initialized) {
+  //     if (lang !== "ar") {
+  //       router.push(pathname, { locale: "ar" });
+  //     }
+  //     setInitialized(true)
+  //   }
+  // }, [lang])
 
   const closeDropdown = () => {
     setDropdownVisible(false);
@@ -83,7 +94,7 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
   };
 
   return (
-    <div className="pr-2">
+    <div className="md:pr-2">
       <div className=" items-center justify-center flex ">
         <div className="flex lg:space-x-4 items-center">
           <Link href={"/contact-us"} className="lg:flex items-center hidden">
@@ -132,15 +143,6 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
               </Button>
             )}
           </div>
-
-          {/* <Link href={"/free"}>
-            <Button variant={"outline"} className="lg:flex items-center hidden border-none text-md">
-              Change Lang
-            </Button>
-          </Link> */}
-          {/* <Link href={"/contact"}>
-            <Button className="hidden lg:block">Get Bird free</Button>
-          </Link> */}
         </div>
       </div>
 

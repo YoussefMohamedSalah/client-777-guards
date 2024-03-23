@@ -117,9 +117,9 @@ const Footer = ({ tMenu, lang }: Props) => {
 						</div>
 					</div>
 					<div className="lg:col-span-4">
-						<div className="lg:grid lg:grid-cols-12">
-							<div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
-								<div className="text-lg  xl:text-[18px] xl:leading-6 font-bold" >{tMenu.contacts}</div>
+						<div className="lg:grid lg:grid-cols-12 ">
+							<div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0 flex flex-col">
+								<div className="text-lg  xl:text-[18px] xl:leading-6 font-bold self-center" >{tMenu.contacts}</div>
 								<div className="font-light space-y-4 text-sm">
 									{email && (
 										<div className="flex items-center">
@@ -156,8 +156,8 @@ const Footer = ({ tMenu, lang }: Props) => {
 								</div>
 							</div>
 							{/* FAST ACCESS */}
-							<div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0">
-								<div className="text-lg xl:text-[18px] xl:leading-6 font-bold">{tMenu.fast_access}</div>
+							<div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0 flex flex-col">
+								<div className="text-lg xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.fast_access}</div>
 								<div className="font-light space-y-4 text-sm">
 									<div className="flex items-center">
 										<Link href="/">

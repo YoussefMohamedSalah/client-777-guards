@@ -19,16 +19,15 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
 	return (
 		<div className="md:items-center flex container pt-5">
 			{isSmallScreen ? (
-				<div className="xl:px-8">
-					<div className="flex flex-col md:row-span-1 gap-2 xl:gap-6 mt-8 xl:px-0">
+				<div className="xl:px-8" style={{ width: "-webkit-fill-available" }}>
+					<div className="flex flex-col md:row-span-1 gap-2 xl:gap-6 mt-8 xl:px-0" style={{ width: "-webkit-fill-available" }}>
 						<p className="text-2xl pt-4 text-start mx-auto">{tServices.our_services}</p>
 						{servicesTabs.map((tab, index: number) => (
 							<motion.div
 								key={index}
-								className={`flex p-1 md:p-8 cursor-pointer
-                ${activeTab.id === tab.id
-										? "rounded-md md:rounded-xl bg-[#f6f5f4] md:bg-white border-gray-200 md:border"
-										: "md:bg-[#f6f5f4] rounded-md xl:rounded-xl items-start justify-start hover:bg-[#eae7e7] "
+								className={`flex p-1 md:p-8 cursor-pointer ${activeTab.id === tab.id
+									? "rounded-md md:rounded-xl border-gray-200 md:border"
+									: "rounded-md xl:rounded-xl items-start justify-start"
 									} `}
 								onClick={() => setActiveTab(tab)}>
 								<div className="flex flex-col items-start md:justify-start">

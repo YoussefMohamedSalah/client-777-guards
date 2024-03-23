@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import ActionButtons from "./_components/action-buttons";
 import Logo from "./_components/logo";
 import { Menu } from "./_components/menu";
+import LangSwitcher from "./_components/LangSwitcher";
 
 interface Props {
   lang: string;
@@ -38,8 +39,16 @@ const Header = ({ lang, tMenu }: Props) => {
     <div className={navbarClasses} >
       <div className="container flex items-center justify-between">
         <div className="flex items-center justify-center gap-2">
-          <Logo />
+          <div className="hidden md:block">
+            <Logo />
+          </div>
+          <div className="md:hidden">
+            <LangSwitcher lang={lang} />
+          </div>
           <Menu tMenu={tMenu} lang={lang} />
+        </div>
+        <div className="self-center md:hidden">
+          <Logo />
         </div>
         <ActionButtons lang={lang} tContactUs={tMenu.contact_us} tMenu={tMenu} />
       </div>

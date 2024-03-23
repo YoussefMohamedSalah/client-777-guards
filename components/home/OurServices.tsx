@@ -15,9 +15,8 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
 	const [activeTab, setActiveTab] = useState(servicesTabs[0]);
 	const isSmallScreen = useMediaQuery({ maxWidth: 767 });
 
-
 	return (
-		<div className="md:items-center flex container pt-5">
+		<section className="md:items-center flex container pt-5">
 			{isSmallScreen ? (
 				<div className="xl:px-8" style={{ width: "-webkit-fill-available" }}>
 					<div className="flex flex-col md:row-span-1 gap-2 xl:gap-6 mt-8 xl:px-0" style={{ width: "-webkit-fill-available" }}>
@@ -114,7 +113,7 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
 					</div>
 				)}
 			</div>
-		</div>
+		</section>
 	);
 };
 

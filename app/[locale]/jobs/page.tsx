@@ -7,7 +7,7 @@ interface Props {
 
 export const metadata = {
   title: "Jobs",
-  description: "Jobs Page"
+  description: "Explore our security field jobs, and apply to join our team at 777 Guards."
 };
 
 async function getAllJobs() {

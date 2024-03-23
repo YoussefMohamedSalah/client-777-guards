@@ -72,10 +72,10 @@ const HomeWrapper = ({ lang }: Props) => {
 	];
 
 	return (
-		<>
+		<section>
 			<MainCarousel />
 			<OurServices lang={lang} tServices={tServices} servicesTabs={servicesTabs} />
-		</>
+		</section>
 	);
 };
 

@@ -9,7 +9,7 @@ interface Props {
 
 export const metadata = {
     title: "Job",
-    description: "Single Job page content"
+    description: "Applying form to join our 777 Guards team."
 };
 
 

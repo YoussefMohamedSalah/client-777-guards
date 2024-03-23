@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslations } from "next-intl";
-import JobCard from "./JobCard";
 
 interface Props {
     jobData: any;
@@ -20,7 +19,8 @@ const SingleJobWrapper = ({ jobData, lang }: Props) => {
         duration: `${t("duration")}`,
         count: `${t("count")}`,
         month: `${t("month")}`,
-        join_us: `${t("join-us")}`
+        join_us: `${t("join-us")}`,
+        not_specified: `${t("not-specified")}`,
     };
 
 
@@ -35,57 +35,56 @@ const SingleJobWrapper = ({ jobData, lang }: Props) => {
                 <div className="flex gap-4 border-b">
                     {tJob.experience}
                     <div className=" font-normal pb-4 w-80">
-                        {jobData.experience}
+                        {jobData.experience ? jobData.experience : tJob.not_specified}
                     </div>
                 </div>
 
                 <div className="flex gap-4 border-b">
                     {tJob.salary}
                     <div className=" font-normal pb-4 w-80">
-                        {jobData.salary}
+                        {jobData.salary ? jobData.salary : tJob.not_specified}
                     </div>
                 </div>
 
                 <div className="flex gap-4 border-b">
                     {tJob.location}
                     <div className=" font-normal pb-4 w-80">
-                        {jobData.location}
+                        {jobData.location ? jobData.location : tJob.not_specified}
                     </div>
                 </div>
-
 
                 <div className="flex gap-4 border-b">
                     {tJob.shift}
                     <div className=" font-normal pb-4 w-80">
-                        {jobData.shift}
+                        {jobData.shift ? jobData.shift : tJob.not_specified}
                     </div>
                 </div>
 
                 <div className="flex gap-4 border-b">
                     {tJob.education}
                     <div className=" font-normal pb-4 w-80">
-                        {jobData.education}
+                        {jobData.education ? jobData.education : tJob.not_specified}
                     </div>
                 </div>
 
                 <div className="flex gap-4 border-b">
                     {tJob.skills}
                     <div className=" font-normal pb-4 w-80">
-                        {jobData.skills}
+                        {jobData.skills ? jobData.skills : tJob.not_specified}
                     </div>
                 </div>
 
                 <div className="flex gap-4 border-b">
                     {tJob.duration}
                     <div className=" font-normal pb-4 w-80">
-                        {jobData.duration}
+                        {jobData.duration ? jobData.duration : tJob.not_specified}
                     </div>
                 </div>
 
                 <div className="flex gap-4">
                     {tJob.count}
                     <div className=" font-normal w-80">
-                        {jobData.count}
+                        {jobData.count ? jobData.count : tJob.not_specified}
                     </div>
                 </div>
 

@@ -58,7 +58,7 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
 					{servicesTabs.map((tab, index: number) => (
 						<motion.div
 							key={index}
-							className={`xl:flex justify-start space-x-4 xl:mt-4 sm:my-10 xl:my-0 ${activeTab === tab ? "text-[#001b96]" : ""}`}
+							className={`xl:flex justify-start space-x-4 xl:mt-4 xl:my-0 ${activeTab === tab ? "text-[#001b96]" : ""}`}
 							onMouseEnter={() => setActiveTab(tab)}
 							initial={{ opacity: 0, y: -10 }}
 							animate={{ opacity: 1, y: 0 }}

@@ -14,19 +14,18 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
   const [activeTab, setActiveTab] = useState(servicesTabs[0]);
 
   return (
-    <section className="md:items-center flex container pt-5">
+    <section className="md:items-center flex container pt-5 w-full">
       {/* mobile view */}
-      <div className="xl:px-8 block md:hidden">
+      <div className="xl:px-8 block md:hidden w-full">
         <div className="flex flex-col md:row-span-1 gap-2 xl:gap-6 mt-8 xl:px-0">
           <p className="text-2xl pt-4 text-start mx-auto">{tServices.our_services}</p>
           {servicesTabs.map((tab, index: number) => (
             <motion.div
               key={index}
-              className={`flex p-1 md:p-8 cursor-pointer ${
-                activeTab.id === tab.id
-                  ? "rounded-md md:rounded-xl border-gray-200 md:border"
-                  : "rounded-md xl:rounded-xl items-start justify-start"
-              } `}
+              className={`flex p-1 md:p-8 cursor-pointer ${activeTab.id === tab.id
+                ? "rounded-md md:rounded-xl border-gray-200 md:border"
+                : "rounded-md xl:rounded-xl items-start justify-start"
+                } `}
               onClick={() => setActiveTab(tab)}>
               <div className="flex flex-col items-start md:justify-start">
                 <div className="font-medium text-sm xl:text-lg">{tab.name}</div>

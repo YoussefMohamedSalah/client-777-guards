@@ -8,39 +8,13 @@ interface DropDownMenuProps {
   onClose: () => void;
   tMenu: any;
   lang: string;
+  social: any[];
 }
 
-const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose, tMenu, lang }) => {
+const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose, tMenu, lang, social }) => {
   const handleLinkClick = () => {
     onClose();
   };
-
-  const social = [
-    {
-      id: 1,
-      path: "https://www.facebook.com/profile.php?id=61556189053260&mibextid=ibOpuV",
-      image: "/assets/social/facebook.svg",
-      name: "facebook",
-      width: 20,
-      height: 20,
-    },
-    {
-      id: 2,
-      path: "https://www.tiktok.com/@777guards.securit?_t=8khOS9cHtIM&_r=1",
-      image: "/assets/social/linkedin.svg",
-      name: "linkedin",
-      width: 20,
-      height: 20,
-    },
-    {
-      id: 3,
-      path: "https://www.instagram.com/777.guards/?igsh=aGI5ZjJpMDc5ZXA4&utm_source=qr",
-      image: "/assets/social/instagram.svg",
-      name: "instagram",
-      width: 20,
-      height: 20,
-    },
-  ];
 
   return (
     <div className="w-screen h-screen bg-accent px-4 items-center justify-center absolute right-0 xl:hidden mt-4 z-9999">

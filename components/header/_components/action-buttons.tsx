@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { X, AlignJustify } from "lucide-react";
@@ -12,26 +12,15 @@ interface Props {
   lang: string;
   tContactUs: string;
   tMenu: any;
+  social: any[];
 }
 
-const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
-  // const [initialized, setInitialized] = useState<boolean>(false)
-
-  const [social, setSocial] = useState<any[]>([]);
+const ActionButtons = ({ lang, tContactUs, tMenu, social }: Props) => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
-
-  // useEffect(() => {
-  //   if (!initialized) {
-  //     if (lang !== "ar") {
-  //       router.push(pathname, { locale: "ar" });
-  //     }
-  //     setInitialized(true)
-  //   }
-  // }, [lang])
 
   const closeDropdown = () => {
     setDropdownVisible(false);
@@ -42,55 +31,6 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
 
   const handleChange = (lang: string) => {
     router.push(pathname, { locale: lang });
-  };
-
-  useEffect(() => {
-    fetchWebsiteData();
-  }, []);
-
-  const fetchWebsiteData = async () => {
-    try {
-      let res = await fetch(`${process.env.NEXT_PUBLIC_REST_API_ENDPOINT}/api/website/777-guards`);
-      if (!res.ok) {
-        throw new Error("Network response was not ok");
-      }
-      let data = await res.json();
-      let socialData = [];
-      if (data.facebook) {
-        socialData.push({
-          id: 1,
-          path: `${data.facebook}`,
-          image: "/assets/social/facebook.svg",
-          name: "facebook",
-          width: 20,
-          height: 20,
-        });
-      }
-      if (data.tiktok) {
-        socialData.push({
-          id: 2,
-          path: `${data.tiktok}`,
-          image: "/assets/social/linkedin.svg",
-          name: "linkedin",
-          width: 20,
-          height: 20,
-        });
-      }
-      if (data.instagram) {
-        socialData.push({
-          id: 2,
-          path: `${data.instagram}`,
-          image: "/assets/social/instagram.svg",
-          name: "instagram",
-          width: 20,
-          height: 20,
-        });
-      }
-      setSocial(socialData);
-      // You can further process the data here as needed
-    } catch (error) {
-      console.log("Error fetching website data:", error);
-    }
   };
 
   return (
@@ -162,7 +102,7 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
         </div>
       )}
 
-      {isDropdownVisible && <DropdownMenu onClose={closeDropdown} tMenu={tMenu} lang={lang} />}
+      {isDropdownVisible && <DropdownMenu onClose={closeDropdown} tMenu={tMenu} lang={lang} social={social} />}
     </div>
   );
 };

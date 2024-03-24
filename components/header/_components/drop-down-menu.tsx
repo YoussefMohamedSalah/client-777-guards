@@ -58,7 +58,9 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose, tMenu, lang, socia
         <div className="space-y-4 flex flex-col px-4">
           <Link href={"/contact-us"}>
             <Button variant={"outline"} className="w-full bg-[#ffff] text-black">
-              Contact us
+              {lang === "en"
+                ? "Contact us"
+                : "تواصل معنا"}
             </Button>
           </Link>
 

@@ -1,10 +1,8 @@
 import React from "react";
 
-
 interface Props {
   tAboutUs: any;
 }
-
 
 const OurMission = ({ tAboutUs }: Props) => {
   return (

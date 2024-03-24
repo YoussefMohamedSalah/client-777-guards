@@ -69,6 +69,13 @@ export const Menu = ({ tMenu, lang }: Props) => {
           </Link>
         </NavigationMenuItem>
         {/* Normal */}
+
+        <NavigationMenuItem>
+          <Link href="/our-services" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.our_services}</NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
         <NavigationMenuItem>
           <Link href="/about-us" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.about_us}</NavigationMenuLink>
@@ -76,70 +83,35 @@ export const Menu = ({ tMenu, lang }: Props) => {
         </NavigationMenuItem>
         {/* With children */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{tMenu.our_services}</NavigationMenuTrigger>
-          {/* <NavigationMenuContent>
-            <div className="flex">
-              <ul className="grid p-2 md:w-[400px] lg:w-[250px] hover:cursor-pointer border-r">
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <PiBookOpenTextLight className="text-2xl mr-2 text-red-600" />
-                  <div className="">
-                    <a>Wikis</a>
-                    <p className="text-gray-400 text-sm font-light">Centralize your knowledge</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <PiTargetLight className="text-2xl mr-2 text-blue-600" />
-                  <div className="">
-                    <a>Projects</a>
-                    <p className="text-gray-400 text-sm font-light">For every team or size</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <PiFileThin className="text-2xl mr-2 text-yellow-600" />
-                  <div className="">
-                    <a>Docs</a>
-                    <p className="text-gray-400 text-sm font-light">Simple & Powerful</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                  <PiSparkleLight className="text-2xl mr-2 text-purple-600" />
-                  <div className="">
-                    <a>Bird Assistant</a>
-                    <p className="text-gray-400 text-sm font-light">Integrated AI Assistant</p>
-                  </div>
-                </div>
-              </ul>
+          <NavigationMenuTrigger>{tMenu.our_companies}</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="flex bg-[#181818]">
               <div>
-                <ul className="grid  p-2 md:w-[400px]  lg:w-[250px] hover:cursor-pointer border-r">
-                  <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                    <div>
-                      <a className="">Template gallery</a>
-                      <p className="text-gray-400 text-sm font-light">Setups to get you started</p>
+                <ul className="grid p-2 md:w-[400px] lg:w-[300px] hover:cursor-pointer border-r">
+                  <Link target="_blank" href="https://www.facebook.com/mohamed.albaag.9?mibextid=ZbWKwL">
+                    <div className="flex items-center gap-1 hover:bg-gray-400/10 py-4 px-2 rounded-sm">
+                      <div>
+                        <a className="">{lang === "en" ? "Al Manal hight service" : "المنال هاي سيرفيس"}</a>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
 
-                  <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
+                  <div className="flex items-center gap-1 hover:bg-gray-400/10 py-4 px-2 rounded-sm">
                     <div>
-                      <a>Customer Stories</a>
-                      <p className="text-gray-400 text-sm font-light">See how teams use bird</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
-                    <div>
-                      <a>Connections</a>
-                      <p className="text-gray-400 text-sm font-light">Connect your tools to bird</p>
+                      <Link href="contact-us" className="">
+                        {lang === "en"
+                          ? "Design of security systems and surveillance cameras"
+                          : "تصميم انظمة الأمن وكاميرات المراقبة"}
+                      </Link>
                     </div>
                   </div>
                 </ul>
               </div>
             </div>
-          </NavigationMenuContent> */}
+          </NavigationMenuContent>
         </NavigationMenuItem>
         {/* children end */}
+
         <NavigationMenuItem>
           <Link href="/jobs" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.jobs}</NavigationMenuLink>
@@ -149,7 +121,7 @@ export const Menu = ({ tMenu, lang }: Props) => {
       </NavigationMenuList>
     </NavigationMenu>
   );
-}
+};
 
 const ListItem = React.forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
   ({ className, title, children, ...props }, ref) => {

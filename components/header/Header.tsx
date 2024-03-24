@@ -36,7 +36,7 @@ const Header = ({ lang, tMenu }: Props) => {
   `;
 
   return (
-    <div className={navbarClasses} >
+    <div className={navbarClasses}>
       <div className="container flex items-center justify-between">
         <div className="flex items-center justify-center gap-2">
           <div className="hidden md:block">

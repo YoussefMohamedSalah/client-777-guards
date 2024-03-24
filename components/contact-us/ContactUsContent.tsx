@@ -17,25 +17,19 @@ const ContactUsContent = ({ tContactUs }: Props) => {
         <div className="flex gap-4 border-b">
           <PiCheckLight className="text-2xl" />
 
-          <div className=" font-normal pb-4 w-80">
-            {tContactUs.info_one}
-          </div>
+          <div className=" font-normal pb-4 w-80">{tContactUs.info_one}</div>
         </div>
 
         <div className="flex gap-4 border-b">
           <PiCheckLight className="text-2xl" />
 
-          <div className=" font-normal pb-4 w-80">
-            {tContactUs.info_two}
-          </div>
+          <div className=" font-normal pb-4 w-80">{tContactUs.info_two}</div>
         </div>
 
         <div className="flex gap-4">
           <PiCheckLight className="text-2xl" />
 
-          <div className=" font-normal pb-4 w-80">
-            {tContactUs.info_three}
-          </div>
+          <div className=" font-normal pb-4 w-80">{tContactUs.info_three}</div>
         </div>
       </div>
     </div>

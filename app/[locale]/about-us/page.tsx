@@ -1,13 +1,11 @@
 import React from "react";
 import AboutUsWrapper from "@/components/about-us/AboutUsWrapper";
 
-
 export const metadata = {
   title: "About",
-  description: "About 777 Guards, we offer top-notch security solutions provided by experienced professionals, including event security, armed guards, secure transportation, surveillance systems, and tailored services for VIPs and special events. Our comprehensive offerings encompass everything from securing facilities to safeguarding valuable assets, ensuring peace of mind for our clients at all times."
+  description:
+    "About 777 Guards, we offer top-notch security solutions provided by experienced professionals, including event security, armed guards, secure transportation, surveillance systems, and tailored services for VIPs and special events. Our comprehensive offerings encompass everything from securing facilities to safeguarding valuable assets, ensuring peace of mind for our clients at all times.",
 };
-
-
 
 const AboutUsPage = () => {
   return (

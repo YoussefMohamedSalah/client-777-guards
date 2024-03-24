@@ -37,22 +37,20 @@ const MainCarousel = () => {
   ];
 
   return (
-    <section className="container mx-auto">
-      <div className="swiper position-sticky" >
+    <section className="mx-auto">
+      <div className="swiper position-sticky">
         <div className="swiper-wrapper">
           <Carousel
             responsive={SINGLE_ITEM_BREAKPOINTS}
             additionalTransfrom={0}
             arrows={false}
-            autoPlaySpeed={3000}
+            autoPlay={true}
+            autoPlaySpeed={5000}
             centerMode={false}
-            className=""
             containerClass="container-with-dots"
-            dotListClass=""
             draggable
             focusOnSelect={false}
             infinite
-            itemClass=""
             keyBoardControl
             minimumTouchDrag={80}
             pauseOnHover
@@ -64,22 +62,17 @@ const MainCarousel = () => {
             rtl={false}
             shouldResetAutoplay
             showDots
-            sliderClass=""
             slidesToSlide={1}
             swipeable>
             {data.map((banner: any, index: number) => {
               return (
-                <a key={index} className="flex justify-center items-center w-100 mx-1 ">
+                <a key={index} className="flex justify-center items-center w-100 mx-1">
                   <Image
-                    style={{
-                      maxHeight: "450px",
-                      minHeight: "220px",
-                    }}
-                    className="img-fluid rounded-md"
+                    className="img-fluid rounded-md h-[200px] md:h-[620px]"
                     src={banner.url}
                     alt="security"
                     width={2170}
-                    height={450}
+                    height={500}
                     quality={100}
                   />
                 </a>
@@ -87,8 +80,8 @@ const MainCarousel = () => {
             })}
           </Carousel>
         </div>
-      </div >
-    </section >
+      </div>
+    </section>
   );
 };
 

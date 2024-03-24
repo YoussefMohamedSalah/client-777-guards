@@ -3,7 +3,6 @@ import ContactUsForm from "./ContactUsForm";
 import ContactUsContent from "./ContactUsContent";
 import { useTranslations } from "next-intl";
 
-
 interface Props {
   lang: string;
 }
@@ -29,7 +28,6 @@ const ContactUsWrapper = ({ lang }: Props) => {
     submit: `${t("submit")}`,
     contact_message: `${t("contact-us-message")}`,
   };
-
 
   return (
     <div className="md:flex justify-center relative w-full h-full overflow-hidden">

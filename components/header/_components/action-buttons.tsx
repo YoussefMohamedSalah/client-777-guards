@@ -17,7 +17,7 @@ interface Props {
 const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
   // const [initialized, setInitialized] = useState<boolean>(false)
 
-  const [social, setSocial] = useState<any[]>([])
+  const [social, setSocial] = useState<any[]>([]);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   const toggleDropdown = () => {
@@ -46,16 +46,16 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
 
   useEffect(() => {
     fetchWebsiteData();
-  }, [])
+  }, []);
 
   const fetchWebsiteData = async () => {
     try {
       let res = await fetch(`${process.env.NEXT_PUBLIC_REST_API_ENDPOINT}/api/website/777-guards`);
       if (!res.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
       let data = await res.json();
-      let socialData = []
+      let socialData = [];
       if (data.facebook) {
         socialData.push({
           id: 1,
@@ -64,17 +64,17 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
           name: "facebook",
           width: 20,
           height: 20,
-        })
+        });
       }
       if (data.tiktok) {
         socialData.push({
           id: 2,
           path: `${data.tiktok}`,
-          image: "/assets/social/tiktok.svg",
-          name: "tiktok",
+          image: "/assets/social/linkedin.svg",
+          name: "linkedin",
           width: 20,
           height: 20,
-        })
+        });
       }
       if (data.instagram) {
         socialData.push({
@@ -84,12 +84,12 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
           name: "instagram",
           width: 20,
           height: 20,
-        })
+        });
       }
-      setSocial(socialData)
+      setSocial(socialData);
       // You can further process the data here as needed
     } catch (error) {
-      console.log('Error fetching website data:', error);
+      console.log("Error fetching website data:", error);
     }
   };
 
@@ -162,7 +162,7 @@ const ActionButtons = ({ lang, tContactUs, tMenu }: Props) => {
         </div>
       )}
 
-      {isDropdownVisible && <DropdownMenu onClose={closeDropdown} tMenu={tMenu} />}
+      {isDropdownVisible && <DropdownMenu onClose={closeDropdown} tMenu={tMenu} lang={lang} />}
     </div>
   );
 };

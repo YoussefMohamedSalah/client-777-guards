@@ -17,7 +17,7 @@ const JobCard = ({ job, lang, tJob }: Props) => {
           className="mb-3 overflow-hidden px-2 md:px-7 text-lg font-semibold sm:text-xl pt-2">
           {job.title}
         </Link>
-        <p className="overflow-hidden px-2 md:px-7 text-sm">{job.description}</p>
+        <p className="overflow-hidden px-4 py-2 md:py-3 md:px-7 text-sm">{job.description}</p>
 
         <div className="mt-5 flex flex-col space-y-3 text-sm font-medium sm:flex-row  sm:space-y-0 sm:space-x-2 gap-1 pr-7 pt-2">
           {job.experience && (

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "Welcome to 777 Guards, where we offer top-notch security solutions provided by experienced professionals, including event security, armed guards, secure transportation, surveillance systems, and tailored services for VIPs and special events. Our comprehensive offerings encompass everything from securing facilities to safeguarding valuable assets, ensuring peace of mind for our clients at all times..",
     url: "https://777-guards.com",
     siteName: "777 Guards",
-    locale: "ar",
+    locale: "en-US",
     type: "website",
   },
   robots: {

@@ -21,9 +21,9 @@ const FooterWrapper = ({ lang }: Props) => {
   };
 
   return (
-    <>
+    <div className="bg-secondary pb-[120px] md:pb-7">
       <Footer tMenu={tMenu} lang={lang} />
-    </>
+    </div>
   );
 };
 

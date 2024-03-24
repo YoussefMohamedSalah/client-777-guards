@@ -43,11 +43,11 @@ const OurServices = ({ tAboutUs }: Props) => {
         <div className="text-3xl xl:text-5xl font-medium justify-center items-center flex">
           {tAboutUs.main_services}
         </div>
-        <div className="grid md:grid-cols-2 gap-4 xl:gap-6 mt-8 px-8 md:px-16 xl:px-0  mx-auto md:w-full">
+        <div className="grid md:grid-cols-2 gap-4 xl:gap-6 mt-8 px-2 md:px-16 xl:px-0 md:mx-auto w-full">
           {tabs.map((tab, index) => (
             <div key={index} className="w-full">
               <Link href="contact-us">
-                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 mt-3 hover:text-indigo-600">
+                <p className="font-semibold lg:text-2xl text-md lg:leading-6 leading-5 mt-3 hover:text-indigo-600">
                   {tab.header}
                 </p>
               </Link>

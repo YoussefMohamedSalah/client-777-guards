@@ -19,7 +19,9 @@ const Footer = ({ tMenu, lang }: Props) => {
   const [phoneNumber1, setPhoneNumber1] = useState<string | null>(null);
   const [phoneNumber2, setPhoneNumber2] = useState<string | null>(null);
   const [landLine, setLandLine] = useState<string | null>(null);
-  const [address, setAddress] = useState<string | null>(null);
+  const [arAddress, setArAddress] = useState<string | null>(null);
+  const [enAddress, setEnAddress] = useState<string | null>(null);
+
 
   useEffect(() => {
     fetchWebsiteData();
@@ -38,7 +40,9 @@ const Footer = ({ tMenu, lang }: Props) => {
       if (data.phone_number_2) setPhoneNumber2(data.phone_number_2);
       if (data.email) setEmail(data.email);
       if (data.land_line) setLandLine(data.land_line);
-      if (data.address) setAddress(data.address);
+      if (data.ar_address) setArAddress(data.ar_address);
+      if (data.en_address) setEnAddress(data.en_address);
+
 
       let socialData = [];
       if (data.facebook) {
@@ -117,7 +121,7 @@ const Footer = ({ tMenu, lang }: Props) => {
             <div className="lg:grid lg:grid-cols-12 ">
               <div className="lg:col-span-8 space-y-6 mt-8 lg:mt-0 flex flex-col">
                 <div className="text-lg  xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.contacts}</div>
-                <div className="font-light space-y-4 text-sm">
+                <div className="font-light space-y-4 text-md md:text-sm">
                   {email && (
                     <div className="flex items-center">
                       <MdAlternateEmail className="text-2xl me-1 text-gray-500" />
@@ -150,11 +154,11 @@ const Footer = ({ tMenu, lang }: Props) => {
                       </span>
                     </div>
                   )}
-                  {address && (
+                  {arAddress || enAddress && (
                     <div className="flex items-center">
                       <IoLocationSharp className="text-2xl me-1 text-gray-500" />
                       <span className="ml-2">
-                        <span>{address}</span>
+                        <span>{lang === "ar" ? arAddress : enAddress}</span>
                       </span>
                     </div>
                   )}
@@ -163,7 +167,7 @@ const Footer = ({ tMenu, lang }: Props) => {
               {/* FAST ACCESS */}
               <div className="lg:col-span-4 space-y-6 mt-8 lg:mt-0 flex flex-col">
                 <div className="text-lg xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.fast_access}</div>
-                <div className="font-light space-y-4 text-sm">
+                <div className="font-light space-y-4 text-md md:text-sm">
                   <div className="flex items-center">
                     <Link href="/">
                       <span className="ml-2">{tMenu.home}</span>

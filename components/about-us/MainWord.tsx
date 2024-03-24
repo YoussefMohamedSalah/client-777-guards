@@ -32,7 +32,7 @@ const MainWord = ({ tAboutUs }: Props) => {
           <p className="font-normal text-md leading-6 text-gray-200 mt-3">{tAboutUs.gm_6}</p>
         </div>
 
-        <div className="w-full lg:w-6/12">
+        <div className="w-full lg:w-6/12  pt-12 lg:pt-0">
           <p className="font-normal text-md leading-3 text-indigo-400 hover:text-indigo-600 cursor-pointer pb-2">
             {tAboutUs.manager_title}
           </p>

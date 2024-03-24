@@ -6,7 +6,7 @@ const Whatsapp = () => {
   return (
     <FloatingWhatsApp
       accountName="777 Guards"
-      phoneNumber="01000131662"
+      phoneNumber="+201000131662"
       avatar="/logos/logopng.png"
       chatMessage="Welcome to 777 Guards"
       darkMode={true}

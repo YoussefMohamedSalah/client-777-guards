@@ -14,9 +14,10 @@ type Tab = {
 
 interface Props {
   tAboutUs: any;
+  lang: string;
 }
 
-const OurServices = ({ tAboutUs }: Props) => {
+const OurServices = ({ tAboutUs, lang }: Props) => {
   const tabs = [
     {
       header: `${tAboutUs.service_1_title}`,
@@ -46,7 +47,7 @@ const OurServices = ({ tAboutUs }: Props) => {
         <div className="grid md:grid-cols-2 gap-4 xl:gap-6 mt-8 px-2 md:px-16 xl:px-0 md:mx-auto w-full">
           {tabs.map((tab, index) => (
             <div key={index} className="w-full">
-              <Link href="contact-us">
+              <Link href={`/${lang}/contact-us`} legacyBehavior passHref>
                 <p className="font-semibold lg:text-2xl text-md lg:leading-6 leading-5 mt-3 hover:text-indigo-600">
                   {tab.header}
                 </p>

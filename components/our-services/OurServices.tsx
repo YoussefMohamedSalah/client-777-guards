@@ -52,7 +52,7 @@ const OurServices = ({ tAboutUs, lang }: Props) => {
         <div className="grid md:grid-cols-2 gap-4 xl:gap-6 mt-8 px-8 md:px-16 xl:px-0  mx-auto md:w-full">
           {tabs.map((tab, index) => (
             <div key={index} className="w-full">
-              <Link href="contact-us">
+              <Link href={`/${lang}/contact-us`} legacyBehavior passHref>
                 <div className="flex flex-col align-center">
                   <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer text-sm">
                     {tAboutUs.request}{" "}

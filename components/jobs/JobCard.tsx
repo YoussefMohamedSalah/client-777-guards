@@ -12,6 +12,7 @@ const JobCard = ({ job, lang, tJob }: Props) => {
       <div className="col-span-12 sm:col-span-12 flex flex-col sm:pl-4">
         <h2 className="text-sm text-green-400 px-4 md:px-7">{tJob.available}</h2>
         <Link
+          legacyBehavior passHref
           href={`/jobs/${job.id}`}
           className="mb-3 overflow-hidden px-2 md:px-7 text-lg font-semibold sm:text-xl pt-2">
           {job.title}

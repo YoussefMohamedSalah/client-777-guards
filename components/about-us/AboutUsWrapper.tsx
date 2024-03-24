@@ -6,7 +6,13 @@ import Border from "../ui/border";
 import { useTranslations } from "next-intl";
 import MainWord from "./MainWord";
 
-const AboutUsWrapper = () => {
+
+interface Props {
+  lang: string;
+}
+
+
+const AboutUsWrapper = ({ lang }: Props) => {
   const t = useTranslations("AboutUsPage");
 
   const tAboutUs = {
@@ -62,7 +68,7 @@ const AboutUsWrapper = () => {
       <Border />
       <MainSection tAboutUs={tAboutUs} />
       <Border />
-      <OurServices tAboutUs={tAboutUs} />
+      <OurServices tAboutUs={tAboutUs} lang={lang} />
     </>
   );
 };

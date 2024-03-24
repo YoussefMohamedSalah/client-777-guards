@@ -37,7 +37,7 @@ const ActionButtons = ({ lang, tContactUs, tMenu, social }: Props) => {
     <div className="md:pr-2">
       <div className=" items-center justify-center flex ">
         <div className="flex lg:space-x-4 items-center">
-          <Link href={"/contact-us"} className="lg:flex items-center hidden">
+          <Link href={`/${lang}/contact-us`} className="lg:flex items-center hidden" legacyBehavior passHref>
             <Button variant={"outline"} className="lg:flex items-center hidden border-none bg-accent text-md gap-1">
               {tContactUs}
             </Button>

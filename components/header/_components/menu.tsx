@@ -26,20 +26,20 @@ export const Menu = ({ tMenu, lang }: Props) => {
       <NavigationMenuList>
         {/* Start */}
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href={`/${lang}`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.home}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         {/* Normal */}
 
         <NavigationMenuItem>
-          <Link href="/our-services" legacyBehavior passHref>
+          <Link href={`/${lang}/our-services`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.our_services}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/about-us" legacyBehavior passHref>
+          <Link href={`/${lang}/about-us`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.about_us}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -60,7 +60,7 @@ export const Menu = ({ tMenu, lang }: Props) => {
 
                   <div className="flex items-center gap-1 hover:bg-gray-400/10 py-4 px-2 rounded-sm">
                     <div>
-                      <Link href="/contact-us" className="">
+                      <Link href={`/${lang}/contact-us`} className="">
                         {lang === "en"
                           ? "Design of security systems and surveillance cameras"
                           : "تصميم انظمة الأمن وكاميرات المراقبة"}
@@ -75,7 +75,7 @@ export const Menu = ({ tMenu, lang }: Props) => {
         {/* children end */}
 
         <NavigationMenuItem>
-          <Link href="/jobs" legacyBehavior passHref>
+          <Link href={`/${lang}/jobs`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.jobs}</NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

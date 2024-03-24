@@ -73,7 +73,7 @@ const Header = ({ lang, tMenu }: Props) => {
       <div className="container flex items-center justify-between">
         <div className="flex items-center justify-center gap-2">
           <div className="hidden md:block">
-            <Logo />
+            <Logo lang={lang} />
           </div>
           <div className="md:hidden">
             <LangSwitcher lang={lang} />
@@ -81,7 +81,7 @@ const Header = ({ lang, tMenu }: Props) => {
           <Menu tMenu={tMenu} lang={lang} />
         </div>
         <div className="self-center md:hidden">
-          <Logo />
+          <Logo lang={lang} />
         </div>
         <ActionButtons lang={lang} tContactUs={tMenu.contact_us} tMenu={tMenu} social={social} />
       </div>

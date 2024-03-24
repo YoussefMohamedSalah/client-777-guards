@@ -44,7 +44,7 @@ const JobsWrapper = ({ jobsData, lang }: Props) => {
         ) : (
           <div className="md:items-center flex flex-col container pt-5 h-[58vh]">
             <div className="py-20 xl:py-20 flex justify-center items-center flex-col">
-              <Link href="/">
+              <Link href={`/${lang}`} legacyBehavior passHref>
                 <Image src="/logos/logopng.png" alt="hero image" width={1000} height={1000} className="w-40 pb-10" />
               </Link>
               <div className="text-4xl xl:text-5xl font-medium  text-center">{tJob.no_jobs_title}</div>

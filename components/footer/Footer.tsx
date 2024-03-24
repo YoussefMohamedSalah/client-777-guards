@@ -95,7 +95,7 @@ const Footer = ({ tMenu, lang }: Props) => {
               {/* LOGO */}
               <div className="lg:col-span-4 pt-4 flex items-center justify-center lg:justify-center lg:items-center">
                 <div className="flex flex-col items-center space-x-2">
-                  <Link href="/">
+                  <Link href={`/${lang}`} legacyBehavior passHref>
                     <Image src="/logos/logopng.png" width={150} height={150} alt="logo" className="w-18 pb-3" />
                   </Link>
                   <ul className="flex flex-wrap space-s-4 md:space-s-5 mx-auto md:mx-0 gap-3 pt-2">
@@ -169,27 +169,27 @@ const Footer = ({ tMenu, lang }: Props) => {
                 <div className="text-lg xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.fast_access}</div>
                 <div className="font-light space-y-4 text-md md:text-sm">
                   <div className="flex items-center">
-                    <Link href="/">
+                    <Link href={`/${lang}`}>
                       <span className="ml-2">{tMenu.home}</span>
                     </Link>
                   </div>
                   <div className="flex items-center">
-                    <Link href="/about-us">
+                    <Link href={`/${lang}/about-us`}>
                       <span className="ml-2">{tMenu.about_us}</span>
                     </Link>
                   </div>
                   <div className="flex items-center">
-                    <Link href="/news">
+                    <Link href={`/${lang}/news`}>
                       <span className="ml-2">{tMenu.news}</span>
                     </Link>
                   </div>
                   <div className="flex items-center">
-                    <Link href="/our-services">
+                    <Link href={`/${lang}/our-services`}>
                       <span className="ml-2">{tMenu.our_services}</span>
                     </Link>
                   </div>
                   <div className="flex items-center">
-                    <Link href="/jobs">
+                    <Link href={`/${lang}/jobs`}>
                       <span className="ml-2">{tMenu.jobs}</span>
                     </Link>
                   </div>

@@ -13,7 +13,7 @@ const JobCard = ({ job, lang, tJob }: Props) => {
         <h2 className="text-sm text-green-400 px-4 md:px-7 text-center">{tJob.available}</h2>
         <Link
           href={`/${lang}/jobs/${job.id}`}
-          className="mb-3 overflow-hidden px-7 md:px-7 text-lg font-semibold sm:text-xl pt-2 text-center">
+          className="mb-3 overflow-hidden px-7 md:px-7 md:text-xxl font-semibold text-xl pt-2 text-center">
           {job.title}
         </Link>
         <p dir="rtl" className="overflow-hidden px-4 py-2 md:py-3 md:px-7 text-sm">{job.description}</p>

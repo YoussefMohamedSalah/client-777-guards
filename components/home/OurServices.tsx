@@ -17,8 +17,8 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
     <section className="md:items-center flex container pt-5 w-full">
       {/* mobile view */}
       <div className="xl:px-8 block md:hidden w-full">
+        <p className="text-2xl pt-4 text-start mx-auto">{tServices.our_services}</p>
         <div className="flex flex-col md:row-span-1 gap-2 xl:gap-6 mt-8 xl:px-0">
-          <p className="text-2xl pt-4 text-start mx-auto">{tServices.our_services}</p>
           {servicesTabs.map((tab, index: number) => (
             <motion.div
               key={index}

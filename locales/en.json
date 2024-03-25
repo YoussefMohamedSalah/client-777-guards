@@ -21,7 +21,53 @@
     "service-7": "Industrial security",
     "service-8": "Women's security",
     "service-9": "Guard dog services",
-    "service-10": "Safety and occupational health training"
+    "service-10": "Safety and occupational health training",
+
+
+
+
+
+
+    
+      "our-partners": "Our Partners",
+      "partner-1": " International Import and Export",
+      "partner-2": "Diana Beach Village",
+      "partner-3": "Baladna Today Newspaper",
+      "partner-4": "High System Company",
+      "partner-5": "Max Clothing Stores",
+      "partner-6": "Cairo Photography Company",
+      "partner-7": "Omar Effendi",
+      "partner-8": "Tawfik Auto Parts Company",
+      "partner-9": "Red Tag",
+      "partner-10": "Contracting Company (Crafts)",
+  
+      "partner-1-location": "El Maadi",
+      "partner-2-location": "North Coast",
+      "partner-3-location": "Dokki - Giza",
+      "partner-4-location": "Mustafa Al-Nahhas - Nasr City",
+      "partner-5-location": "Mansoura Branch",
+      "partner-6-location": "Nasr City Branch - Maadi Branch",
+      "partner-7-location": "Adly - Murad - Talaat Harb - Al-Liqani - Roxy - Al-Hijaz - Al-Sawalehi Branches",
+      "partner-8-location": "Maadi",
+      "partner-9-location": "Mall Masr",
+      "partner-10-location": "Maadi"
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   },
   "JobsPage": {
     "available": "Available",

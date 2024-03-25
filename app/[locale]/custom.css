@@ -1,0 +1,115 @@
+.categories-wrapper .swiper-wrapper {
+    padding-top: 1em;
+  }
+  
+  .single-cat-item {
+    flex-basis: 0;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .single-cat-item .title {
+    font-size: 17px;
+    transition: 0.3s;
+  }
+  
+  .single-cat-item .item-img {
+    border-radius: 10px;
+    width: 150px;
+    aspect-ratio: 1/1;
+    margin: 0 auto 12px;
+    display: grid;
+    place-content: center;
+    transition: 0.3s;
+    box-shadow: 0 0 0 20px transparent;
+  }
+  
+  .single-cat-item .item-img img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .single-cat-item:hover .item-img {
+    box-shadow: 0 0 5px rgba(180, 180, 180, 0.31);
+  }
+  
+  .single-cat-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .single-cat-item:hover span,
+  .single-cat-item:hover .title {
+    color: #90919b !important;
+  }
+  
+
+  .swiper-button-next-outside,
+.swiper-button-prev-outside {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  box-shadow: 0 0 0 1px #e0e0e0;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.swiper-button-next-outside:hover,
+.swiper-button-prev-outside:hover {
+  color: white;
+  background: #344dbd; /* assuming $main_blue is defined elsewhere */
+}
+
+.swiper-button-next-outside i,
+.swiper-button-prev-outside i {
+  --Iconsax-Size: 18px;
+}
+
+.swiper-button-next-outside {
+  right: -10px;
+}
+
+.swiper-button-prev-outside {
+  left: -10px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.top-slider-arrows {
+  display: flex;
+  gap: 10px;
+}
+
+.top-slider-arrows .swiper-button-next-outside,
+.top-slider-arrows .swiper-button-prev-outside {
+  opacity: 1;
+  position: static;
+  transform: none;
+  border: 0;
+  box-shadow: none;
+  background: #264AEC; /* assuming $main_blue is defined elsewhere */
+  width: 25px;
+  height: 25px;
+}
+
+.top-slider-arrows .swiper-button-next-outside i,
+.top-slider-arrows .swiper-button-prev-outside i {
+  --Iconsax-Color: #fff;
+  --Iconsax-Size: 16px;
+}
+
+.top-slider-arrows .swiper-button-next-outside:hover,
+.top-slider-arrows .swiper-button-prev-outside:hover {
+  background: #dadada; /* assuming $yellow is defined elsewhere */
+}

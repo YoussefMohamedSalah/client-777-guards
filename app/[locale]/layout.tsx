@@ -1,5 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import "./custom.css";
+
 import HeaderWrapper from "@/components/header/HeaderWrapper";
 import FooterWrapper from "@/components/footer/FooterWrapper";
 import { useLocale } from "next-intl";

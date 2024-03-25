@@ -8,7 +8,7 @@ interface Props {
 const MainWord = ({ tAboutUs }: Props) => {
   return (
     <div className="my-5">
-      <p className="font-normal text-md leading-3 text-indigo-400 hover:text-indigo-600 cursor-pointer pb-2">
+      <p className="font-normal text-lg leading-3 text-yellow-500	hover:text-yellow-600 cursor-pointer pb-4">
         {tAboutUs.head_word_title}
       </p>
       <div className="w-full lg:w-12/12">

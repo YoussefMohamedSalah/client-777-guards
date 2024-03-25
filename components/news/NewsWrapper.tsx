@@ -38,10 +38,12 @@ const NewsWrapper = ({ lang }: Props) => {
                         </Link>
                         <div className="text-4xl xl:text-5xl font-medium  text-center">{tJob.no_jobs_title}</div>
                         <div className="py-4 xl:w-2/3  text-center px-3">{tJob.no_jobs_desc}</div>
-                        <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer">
-                            {tJob.back}{" "}
-                            {lang === "en" ? <PiArrowRight className="ml-3 text-sm" /> : <PiArrowLeft className="ms-3 text-sm" />}
-                        </div>
+                        <Link href={`/${lang}`} legacyBehavior passHref>
+                            <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer">
+                                {tJob.back}{" "}
+                                {lang === "en" ? <PiArrowRight className="ml-3 text-sm" /> : <PiArrowLeft className="ms-3 text-sm" />}
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </div>

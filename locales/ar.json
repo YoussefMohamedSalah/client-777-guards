@@ -23,9 +23,7 @@
     "service-9": "خدمات كلاب الحراسه",
     "service-10": "التدريب علي السلامه و الصحه المهنيه",
 
-
-
-    "our-partners" :"شركائنا",
+    "our-partners": "شركائنا",
     "partner-1": "الشركة العالمية للإستيراد والتصدير",
     "partner-2": "قرية ديانا بيتش",
     "partner-3": "جريدة بلدنا اليوم",
@@ -47,11 +45,6 @@
     "partner-8-location": "المعادي",
     "partner-9-location": "مول مصر",
     "partner-10-location": "المعادي"
-
-
-
-
-
   },
   "JobsPage": {
     "available": "متاح",

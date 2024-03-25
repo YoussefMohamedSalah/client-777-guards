@@ -16,19 +16,27 @@ const JobCard = ({ job, lang, tJob }: Props) => {
           className="mb-3 overflow-hidden px-7 md:px-7 md:text-xxl font-semibold text-xl pt-2 text-center">
           {job.title}
         </Link>
-        <p dir="rtl" className="overflow-hidden px-4 py-2 md:py-3 md:px-7 text-sm">{job.description}</p>
+        <p dir="rtl" className="overflow-hidden px-4 py-2 md:py-3 md:px-7 text-sm">
+          {job.description}
+        </p>
 
-        <div className="mt-5 flex flex-col space-y-3 text-sm font-medium sm:flex-row sm:space-y-0 sm:space-x-2 gap-1 pr-7 pt-2" dir="rtl">
+        <div
+          className="mt-5 flex flex-col space-y-3 text-sm font-medium sm:flex-row sm:space-y-0 sm:space-x-2 gap-1 pr-7 pt-2"
+          dir="rtl">
           {job.experience && (
             <div className="w-full sm:w-auto">
               {tJob.experience}
-              <span className="ml-2 mr-2 rounded-full bg-green-100 px-3 py-1 text-green-900 p-1" dir="rtl">{job.experience}</span>
+              <span className="ml-2 mr-2 rounded-full bg-green-100 px-3 py-1 text-green-900 p-1" dir="rtl">
+                {job.experience}
+              </span>
             </div>
           )}
           {job.salary && (
             <div className="w-full sm:w-auto">
               {tJob.salary}
-              <span className="ml-2 mr-2 rounded-full bg-blue-100 px-2 py-0.5 text-blue-900 p-1" dir="rtl">{job.salary}</span>
+              <span className="ml-2 mr-2 rounded-full bg-blue-100 px-2 py-0.5 text-blue-900 p-1" dir="rtl">
+                {job.salary}
+              </span>
             </div>
           )}
           {job.location && (
@@ -42,19 +50,25 @@ const JobCard = ({ job, lang, tJob }: Props) => {
           {job.shift && (
             <div className="w-full sm:w-auto">
               {tJob.shift}
-              <span className="ml-2 mr-2 rounded-full bg-purple-100 px-2 py-0.5 text-purple-900 p-1" dir="rtl">{job.shift}</span>
+              <span className="ml-2 mr-2 rounded-full bg-purple-100 px-2 py-0.5 text-purple-900 p-1" dir="rtl">
+                {job.shift}
+              </span>
             </div>
           )}
           {job.education && (
             <div className="w-full sm:w-auto">
               {tJob.education}
-              <span className="ml-2 mr-2 rounded-full bg-red-100 px-2 py-0.5 text-red-900 p-1" dir="rtl">{job.education}</span>
+              <span className="ml-2 mr-2 rounded-full bg-red-100 px-2 py-0.5 text-red-900 p-1" dir="rtl">
+                {job.education}
+              </span>
             </div>
           )}
           {job.skills && (
             <div className="w-full sm:w-auto">
               {tJob.skills}
-              <span className="ml-2 mr-2 rounded-full bg-indigo-100 px-2 py-0.5 text-indigo-900 p-1" dir="rtl">{job.skills}</span>
+              <span className="ml-2 mr-2 rounded-full bg-indigo-100 px-2 py-0.5 text-indigo-900 p-1" dir="rtl">
+                {job.skills}
+              </span>
             </div>
           )}
           {job.duration && (

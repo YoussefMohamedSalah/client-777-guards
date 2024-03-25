@@ -22,10 +22,11 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
           {servicesTabs.map((tab, index: number) => (
             <motion.div
               key={index}
-              className={`flex p-1 md:p-8 cursor-pointer ${activeTab.id === tab.id
-                ? "rounded-md md:rounded-xl border-gray-200 md:border"
-                : "rounded-md xl:rounded-xl items-start justify-start"
-                } `}
+              className={`flex p-1 md:p-8 cursor-pointer ${
+                activeTab.id === tab.id
+                  ? "rounded-md md:rounded-xl border-gray-200 md:border"
+                  : "rounded-md xl:rounded-xl items-start justify-start"
+              } `}
               onClick={() => setActiveTab(tab)}>
               <div className="flex flex-col items-start md:justify-start">
                 <div className="font-medium text-sm xl:text-lg">{tab.name}</div>

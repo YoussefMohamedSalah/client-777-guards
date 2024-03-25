@@ -73,4 +73,3 @@ export default function RootLayout({ children, params }: Props) {
     </html>
   );
 }
-

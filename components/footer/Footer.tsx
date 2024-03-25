@@ -22,7 +22,6 @@ const Footer = ({ tMenu, lang }: Props) => {
   const [arAddress, setArAddress] = useState<string | null>(null);
   const [enAddress, setEnAddress] = useState<string | null>(null);
 
-
   useEffect(() => {
     fetchWebsiteData();
   }, []);
@@ -42,7 +41,6 @@ const Footer = ({ tMenu, lang }: Props) => {
       if (data.land_line) setLandLine(data.land_line);
       if (data.ar_address) setArAddress(data.ar_address);
       if (data.en_address) setEnAddress(data.en_address);
-
 
       let socialData = [];
       if (data.facebook) {
@@ -154,14 +152,15 @@ const Footer = ({ tMenu, lang }: Props) => {
                       </span>
                     </div>
                   )}
-                  {arAddress || enAddress && (
-                    <div className="flex items-center">
-                      <IoLocationSharp className="text-2xl me-1 text-gray-500" />
-                      <span className="ml-2">
-                        <span>{lang === "ar" ? arAddress : enAddress}</span>
-                      </span>
-                    </div>
-                  )}
+                  {arAddress ||
+                    (enAddress && (
+                      <div className="flex items-center">
+                        <IoLocationSharp className="text-2xl me-1 text-gray-500" />
+                        <span className="ml-2">
+                          <span>{lang === "ar" ? arAddress : enAddress}</span>
+                        </span>
+                      </div>
+                    ))}
                 </div>
               </div>
               {/* FAST ACCESS */}

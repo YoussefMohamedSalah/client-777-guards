@@ -6,11 +6,9 @@ import Border from "../ui/border";
 import { useTranslations } from "next-intl";
 import MainWord from "./MainWord";
 
-
 interface Props {
   lang: string;
 }
-
 
 const AboutUsWrapper = ({ lang }: Props) => {
   const t = useTranslations("AboutUsPage");

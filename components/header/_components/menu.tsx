@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { getDirection } from "@/utils/getDirection";
 
-
 interface Props {
   tMenu: any;
   lang: string;

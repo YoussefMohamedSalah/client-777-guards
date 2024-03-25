@@ -12,7 +12,7 @@ const CategoryCard: React.FC<Props> = ({ item }) => {
       <div className="item-img">
         <Image
           src={item.url ?? "/assets/placeholders/category.png"}
-          alt={"partner"}
+          alt={item.name}
           width={200}
           height={200}
           quality={100}

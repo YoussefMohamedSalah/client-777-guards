@@ -152,15 +152,14 @@ const Footer = ({ tMenu, lang }: Props) => {
                       </span>
                     </div>
                   )}
-                  {arAddress ||
-                    (enAddress && (
-                      <div className="flex items-center">
-                        <IoLocationSharp className="text-2xl me-1 text-gray-500" />
-                        <span className="ml-2">
-                          <span>{lang === "ar" ? arAddress : enAddress}</span>
-                        </span>
-                      </div>
-                    ))}
+                  {(arAddress || enAddress) && (
+                    <div className="flex items-center">
+                      <IoLocationSharp className="text-2xl me-1 text-gray-500" />
+                      <span className="ml-2">
+                        <span>{lang === "ar" ? arAddress : enAddress}</span>
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
               {/* FAST ACCESS */}

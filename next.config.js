@@ -4,19 +4,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "staging-store-api.seedsflow.net",
+        hostname: "777-guards.com",
         pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "store-api.seedsflow.net",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn.seedsflow.net",
-        pathname: "**",
-      },
+      }
     ],
   },
 };

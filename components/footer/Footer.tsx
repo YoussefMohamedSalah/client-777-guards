@@ -87,7 +87,7 @@ const Footer = ({ tMenu, lang }: Props) => {
       <div className="container my-6">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 md:px-0">
           {/* MAP */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-7">
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-8">
                 <LocationMap />
@@ -117,9 +117,9 @@ const Footer = ({ tMenu, lang }: Props) => {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
             <div className="lg:grid lg:grid-cols-12 ">
-              <div className="lg:col-span-8 space-y-6 mt-8 lg:mt-0 flex flex-col">
+              <div className="lg:col-span-7 space-y-6 mt-8 lg:mt-0 flex flex-col">
                 <div className="text-lg  xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.contacts}</div>
                 <div className="font-light space-y-4 text-md md:text-sm">
                   {email && (
@@ -165,7 +165,7 @@ const Footer = ({ tMenu, lang }: Props) => {
                 </div>
               </div>
               {/* FAST ACCESS */}
-              <div className="lg:col-span-4 space-y-6 mt-8 lg:mt-0 flex flex-col">
+              <div className="lg:col-span-5 space-y-6 mt-8 lg:mt-0 flex flex-col">
                 <div className="text-lg xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.fast_access}</div>
                 <div className="font-light space-y-4 text-md md:text-sm">
                   <div className="flex items-center">
@@ -174,20 +174,20 @@ const Footer = ({ tMenu, lang }: Props) => {
                     </Link>
                   </div>
                   <div className="flex items-center">
-                    <Link href={`/${lang}/about-us`}>
-                      <span className="ml-2">{tMenu.about_us}</span>
-                    </Link>
-                  </div>
-                  <div className="flex items-center">
-                    <Link href={`/${lang}/news`}>
-                      <span className="ml-2">{tMenu.news}</span>
-                    </Link>
-                  </div>
-                  <div className="flex items-center">
                     <Link href={`/${lang}/our-services`}>
                       <span className="ml-2">{tMenu.our_services}</span>
                     </Link>
                   </div>
+                  <div className="flex items-center">
+                    <Link href={`/${lang}/about-us`}>
+                      <span className="ml-2">{tMenu.about_us}</span>
+                    </Link>
+                  </div>
+                  {/* <div className="flex items-center">
+                    <Link href={`/${lang}/news`}>
+                      <span className="ml-2">{tMenu.news}</span>
+                    </Link>
+                  </div> */}
                   <div className="flex items-center">
                     <Link href={`/${lang}/jobs`}>
                       <span className="ml-2">{tMenu.jobs}</span>

@@ -30,14 +30,14 @@ const NewsWrapper = ({ lang }: Props) => {
 
     return (
         <section>
-            <div className="md:items-center flex flex-col container pt-5">
-                <div className="md:items-center flex flex-col container pt-5 h-[58vh]">
-                    <div className="py-20 xl:py-20 flex justify-center items-center flex-col">
+            <div className="md:items-center flex flex-col container">
+                <div className="md:items-center flex flex-col pt-5 min-h-[58vh]">
+                    <div className="py-10 xl:py-20 flex justify-center items-center flex-col">
                         <Link href={`/${lang}`} legacyBehavior passHref>
                             <Image src="/logos/logopng.png" alt="hero image" width={1000} height={1000} className="w-40 pb-10" />
                         </Link>
                         <div className="text-4xl xl:text-5xl font-medium  text-center">{tJob.no_jobs_title}</div>
-                        <div className="py-4 xl:w-2/3  text-center px-10">{tJob.no_jobs_desc}</div>
+                        <div className="py-4 xl:w-2/3  text-center px-3">{tJob.no_jobs_desc}</div>
                         <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer">
                             {tJob.back}{" "}
                             {lang === "en" ? <PiArrowRight className="ml-3 text-sm" /> : <PiArrowLeft className="ms-3 text-sm" />}

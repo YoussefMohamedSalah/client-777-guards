@@ -3,12 +3,12 @@ import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 
 // Define your API key
-const googleApiKey = "GOOGLE_MAPS_API_KEY";
+const googleApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
 // Define the location (latitude and longitude) for the marker
 const markerPosition = {
-  lat: 40.7128, // Example latitude (New York)
-  lng: -74.006, // Example longitude (New York)
+  lat: 30.047461598473653, // Example latitude (New York)
+  lng: 31.361787906266915, // Example longitude (New York)
 };
 
 const LocationMap: React.FC = () => {

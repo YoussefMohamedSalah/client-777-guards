@@ -4,15 +4,14 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { ResponsiveType } from "react-multi-carousel";
 import OurPartnersBtnsGroup from "./OurPartnersBtnsGroup";
-import Image from "next/image";
-import CategoryCard from "./PartnerCard";
+import CustomerCard from "./CustomerCard";
 
 interface Props {
   lang: string;
-  partnersTabs: any[];
+  customersTabs: any[];
 }
 
-const OurPartnersCarousel = ({ lang, partnersTabs }: Props) => {
+const OurCustomersCarousel = ({ lang, customersTabs }: Props) => {
   const isRtl = lang === "ar";
 
   const TOP_CATEGORIES_BREAKPOINTS: ResponsiveType = {
@@ -82,10 +81,10 @@ const OurPartnersCarousel = ({ lang, partnersTabs }: Props) => {
               slidesToSlide={1}
               swipeable
               rtl={isRtl}>
-              {partnersTabs.map((partner: string, index: number) => {
+              {customersTabs.map((customer: string, index: number) => {
                 return (
-                  <div key={`partner--key-${index}`} className="p-[1rem]">
-                    <CategoryCard item={partner} />
+                  <div key={`customer--key-${index}`} className="p-[1rem]">
+                    <CustomerCard item={customer} />
                   </div>
                 );
               })}
@@ -97,4 +96,4 @@ const OurPartnersCarousel = ({ lang, partnersTabs }: Props) => {
   );
 };
 
-export default OurPartnersCarousel;
+export default OurCustomersCarousel;

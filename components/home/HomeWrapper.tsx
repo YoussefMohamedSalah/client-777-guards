@@ -3,7 +3,7 @@ import MainCarousel from "./MainCarousel";
 import OurServices from "./OurServices";
 import { useTranslations } from "next-intl";
 import Border from "../ui/border";
-import OurPartners from "./OurPartners";
+import OurCustomers from "./OurCustomers";
 
 interface Props {
   lang: string;
@@ -24,7 +24,7 @@ const HomeWrapper = ({ lang }: Props) => {
     service_8: `${t("service-8")}`,
     service_9: `${t("service-9")}`,
     service_10: `${t("service-10")}`,
-    our_partners: `${t("our-partners")}`,
+    our_customers: `${t("our-customers")}`,
     partner_1: `${t("partner-1")}`,
     partner_2: `${t("partner-2")}`,
     partner_3: `${t("partner-3")}`,
@@ -100,7 +100,7 @@ const HomeWrapper = ({ lang }: Props) => {
     },
   ];
 
-  const partnersTabs = [
+  const customersTabs = [
     {
       url: "/assets/partners/a.jpg",
       location: tServices.partner_1_location,
@@ -158,7 +158,7 @@ const HomeWrapper = ({ lang }: Props) => {
       <MainCarousel />
       <OurServices lang={lang} tServices={tServices} servicesTabs={servicesTabs} />
       <Border />
-      <OurPartners lang={lang} ourPartners={tServices.our_partners} partnersTabs={partnersTabs} />
+      <OurCustomers lang={lang} ourCustomers={tServices.our_customers} customersTabs={customersTabs} />
     </section>
   );
 };

@@ -6,12 +6,12 @@ interface Props {
   className?: string;
 }
 
-const CategoryCard: React.FC<Props> = ({ item }) => {
+const CustomerCard: React.FC<Props> = ({ item }) => {
   return (
     <div className="single-cat-item">
       <div className="item-img">
         <Image
-          src={item.url ?? "/assets/placeholders/category.png"}
+          src={item.url ?? "/assets/placeholders/customer.png"}
           alt={item.name}
           width={200}
           height={200}
@@ -21,9 +21,8 @@ const CategoryCard: React.FC<Props> = ({ item }) => {
         />
       </div>
       <h5 className="title"> {item.name} </h5>
-      <h5 className="title"> {item.location} </h5>
     </div>
   );
 };
 
-export default CategoryCard;
+export default CustomerCard;

@@ -77,6 +77,8 @@
     "info-one": "Trained security personnel equipped with the latest technology to ensure safety and protection for your premises.",
     "info-two": "Comprehensive security solutions tailored to meet the specific needs and requirements of your organization.",
     "info-three": "Round-the-clock surveillance and monitoring services provided by our experienced team of security professionals.",
+    
+    
     "full-name": "Full name",
     "email": "Email",
     "how-to-help": "How can we help ?",
@@ -85,6 +87,13 @@
     "know-more": "Know more about 777-Guards.",
     "others": "Others",
     "your-message": "Your message?",
+
+    "full-name-holder": "Enter your full name",
+    "phone-number-holder": "Enter your phone number",
+    "email-holder": "Enter your email address",
+    "your-message-holder": "Enter your message here...",
+    
+    
     "submit": "Submit",
     "contact-us-message": " We have received your inquiry and will be contacting you via email or mobile shortly.",
     "birthday": "Birthday date",

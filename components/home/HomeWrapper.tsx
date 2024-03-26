@@ -4,6 +4,7 @@ import OurServices from "./OurServices";
 import { useTranslations } from "next-intl";
 import Border from "../ui/border";
 import OurCustomers from "./OurCustomers";
+import ContactUsWrapper from "../contact-us/ContactUsWrapper";
 
 interface Props {
   lang: string;
@@ -159,6 +160,12 @@ const HomeWrapper = ({ lang }: Props) => {
       <OurServices lang={lang} tServices={tServices} servicesTabs={servicesTabs} />
       <Border />
       <OurCustomers lang={lang} ourCustomers={tServices.our_customers} customersTabs={customersTabs} />
+      <Border />
+      <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
+        <div className="md:flex justify-center relative w-full h-full overflow-hidden">
+          <ContactUsWrapper lang={lang} />
+        </div>
+      </div>
     </section>
   );
 };

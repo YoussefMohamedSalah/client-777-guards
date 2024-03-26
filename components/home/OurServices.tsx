@@ -22,11 +22,10 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
           {servicesTabs.map((tab, index: number) => (
             <motion.div
               key={index}
-              className={`flex p-1 md:p-8 cursor-pointer ${
-                activeTab.id === tab.id
-                  ? "rounded-md md:rounded-xl border-gray-200 md:border"
-                  : "rounded-md xl:rounded-xl items-start justify-start"
-              } `}
+              className={`flex p-1 md:p-8 cursor-pointer ${activeTab.id === tab.id
+                ? "rounded-md md:rounded-xl border-gray-200 md:border"
+                : "rounded-md xl:rounded-xl items-start justify-start"
+                } `}
               onClick={() => setActiveTab(tab)}>
               <div className="flex flex-col items-start md:justify-start">
                 <div className="font-medium text-sm xl:text-lg">{tab.name}</div>
@@ -39,7 +38,7 @@ const OurServices = ({ tServices, servicesTabs, lang }: Props) => {
         <div className="pt-6 md:py-10 lg:px-16 xl:px-0 md:px-16 w-full">
           {activeTab && (
             <div className="flex justify-center items-center flex-col">
-              <Image className="w-full border rounded-xl" src={activeTab.image} width={1025} height={500} alt="logo" />
+              <Image className="w-full border rounded-xl" src={activeTab.image} width={1025} height={500} alt="logo" loading="lazy" />
             </div>
           )}
         </div>

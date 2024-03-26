@@ -4,9 +4,6 @@ import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { Computer, ScreenShare, Share, Smile } from "lucide-react";
-import Image from "next/image";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -17,6 +14,7 @@ import { getDirection } from "@/utils/getDirection";
 
 const FormSchema = z.object({
   full_name: z.string(),
+  phone_number: z.string(),
   email: z.string().email(),
   subject: z.enum(["Arrange Call", "Get Prices", "Know more about 777-guards", "Other"]),
   info: z.string(),
@@ -24,6 +22,7 @@ const FormSchema = z.object({
 
 type FormValues = {
   full_name: string;
+  phone_number: string;
   email: string;
   subject: "Arrange Call" | "Get Prices" | "Know more about 777-guards" | "Other";
   info: string;
@@ -44,6 +43,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       full_name: "",
+      phone_number: "",
       email: "",
       subject: "Get Prices",
       info: "",
@@ -86,7 +86,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
                 <FormItem className="items-center justify-center w-full">
                   <FormLabel className="text-sm">{tContactUs.full_name} *</FormLabel>
                   <FormControl>
-                    <Input {...field} />
+                    <Input placeholder={`${tContactUs.full_name_holder}`} {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -98,7 +98,19 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
                 <FormItem className="items-center justify-center w-full">
                   <FormLabel className="text-sm">{tContactUs.email} *</FormLabel>
                   <FormControl>
-                    <Input {...field} />
+                    <Input placeholder={`${tContactUs.email_holder}`} {...field} />
+                  </FormControl>
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone_number"
+              render={({ field }) => (
+                <FormItem className="items-center justify-center w-full">
+                  <FormLabel className="text-sm">{tContactUs.phone_number} *</FormLabel>
+                  <FormControl>
+                    <Input placeholder={`${tContactUs.phone_number_holder}`} {...field} />
                   </FormControl>
                 </FormItem>
               )}
@@ -115,7 +127,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
                         <SelectValue placeholder="Select an option" />
                       </SelectTrigger>
                     </FormControl>
-                    <SelectContent dir={getDirection(lang)}>
+                    <SelectContent dir={getDirection(lang)} className="bg-secondary">
                       <div className="flex gap-4">
                         <SelectItem value="Get prices">{tContactUs.get_prices}</SelectItem>
                       </div>
@@ -135,7 +147,7 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
                 <FormItem className="items-center justify-center w-full">
                   <FormLabel className="w-60 text-sm">{tContactUs.your_message}</FormLabel>
                   <FormControl>
-                    <Textarea style={{ height: "100px" }} {...field} />
+                    <Textarea style={{ height: "100px" }} placeholder={`${tContactUs.your_message_holder}`} {...field} />
                   </FormControl>
                 </FormItem>
               )}

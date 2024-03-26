@@ -11,6 +11,8 @@
     "our-companies": "Our Companies"
   },
   "HomePage": {
+    "home-title":"Home",
+    "home-desc":"Welcome to 777 Guards, where we offer top-notch security solutions provided by experienced professionals, including event security, armed guards, secure transportation, surveillance systems, and tailored services for VIPs and special events. Our comprehensive offerings encompass everything from securing facilities to safeguarding valuable assets, ensuring peace of mind for our clients at all times.",
     "our-services-contain": "Our services include",
     "service-1": "Facilities security",
     "service-2": "VIP individuals security",
@@ -47,6 +49,8 @@
     "partner-10-location": "Maadi"
   },
   "JobsPage": {
+    "jobs-title":"Our jobs",
+    "jobs-desc":"Explore our security field jobs, and apply to join our team at 777 Guards.",
     "available": "Available",
     "closed": "Closed",
     "experience": "Experience",
@@ -65,6 +69,8 @@
     "not-specified": "Not specified"
   },
   "ContactUsPage": {
+    "contact-title":"Contact us",
+    "contact-desc":"Contact us The best security company in Egypt where, we offer top-notch security solutions provided by experienced professionals, including event security, armed guards, secure transportation, surveillance systems, and tailored services for VIPs and special events. Our comprehensive offerings encompass everything from securing facilities to safeguarding valuable assets, ensuring peace of mind for our clients at all times.",
     "have-question": "Have A Question?",
     "lets-talk": "Let's talk about how can",
     "help-you": "help you.",
@@ -88,6 +94,10 @@
     "apply-message": "Thank you for applying to our job position. We will be in touch shortly to follow up on the process."
   },
   "AboutUsPage": {
+    "about-title":"About us",
+    "about-desc":"About 777 Guards, we offer top-notch security solutions provided by experienced professionals, including event security, armed guards, secure transportation, surveillance systems, and tailored services for VIPs and special events. Our comprehensive offerings encompass everything from securing facilities to safeguarding valuable assets, ensuring peace of mind for our clients at all times.",
+    "services-title":"Our services",
+    "services-desc":"777 Guards offer top-notch security solutions provided by experienced professionals, including event security, armed guards, secure transportation, surveillance systems, and tailored services for VIPs and special events. Our comprehensive offerings encompass everything from securing facilities to safeguarding valuable assets, ensuring peace of mind for our clients at all times.",
     "about": "About",
     "request": "Request service",
     "main-section-title": "We are here to provide Comprehensive 24/7 Security Services Ensuring Safety and Compliance",

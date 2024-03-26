@@ -53,10 +53,10 @@ const Footer = ({ tMenu, lang }: Props) => {
           height: 20,
         });
       }
-      if (data.tiktok) {
+      if (data.linkedin) {
         socialData.push({
           id: 2,
-          path: `${data.tiktok}`,
+          path: `${data.linkedin}`,
           image: "/assets/social/linkedin.svg",
           name: "linkedin",
           width: 20,

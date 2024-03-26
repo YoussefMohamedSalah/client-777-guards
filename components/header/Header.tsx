@@ -26,6 +26,8 @@ const Header = ({ lang, tMenu }: Props) => {
       }
       let data = await res.json();
       let socialData = [];
+
+      console.log(data)
       if (data.facebook) {
         socialData.push({
           id: 1,
@@ -36,10 +38,10 @@ const Header = ({ lang, tMenu }: Props) => {
           height: 20,
         });
       }
-      if (data.tiktok) {
+      if (data.linkedin) {
         socialData.push({
           id: 2,
-          path: `${data.tiktok}`,
+          path: `${data.linkedin}`,
           image: "/assets/social/linkedin.svg",
           name: "linkedin",
           width: 20,

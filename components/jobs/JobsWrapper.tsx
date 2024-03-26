@@ -30,6 +30,8 @@ const JobsWrapper = ({ jobsData, lang }: Props) => {
     no_jobs_desc: `${t("no-jobs-desc")}`,
   };
 
+  console.log(jobsData)
+
   return (
     <section>
       <div className="md:items-center flex flex-col container pt-5">

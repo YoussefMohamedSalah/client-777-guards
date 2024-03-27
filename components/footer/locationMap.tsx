@@ -13,18 +13,20 @@ const markerPosition = {
 
 const LocationMap: React.FC = () => {
   return (
-    <LoadScript googleMapsApiKey={googleApiKey}>
-      <GoogleMap
-        mapContainerStyle={{
-          width: "100%",
-          height: "250px",
-        }}
-        center={markerPosition}
-        zoom={13} // Adjust the zoom level as needed
-      >
-        <Marker position={markerPosition} />
-      </GoogleMap>
-    </LoadScript>
+    <div className="md:container">
+      <LoadScript googleMapsApiKey={googleApiKey}>
+        <GoogleMap
+          mapContainerStyle={{
+            width: "100%",
+            height: "250px",
+          }}
+          center={markerPosition}
+          zoom={13} // Adjust the zoom level as needed
+        >
+          <Marker position={markerPosition} />
+        </GoogleMap>
+      </LoadScript>
+    </div>
   );
 };
 

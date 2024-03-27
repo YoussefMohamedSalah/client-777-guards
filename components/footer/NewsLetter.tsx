@@ -1,19 +1,23 @@
 import React from 'react'
 
-const NewsLetter = () => {
+interface Props {
+    tNewsLetter: any;
+}
+
+const NewsLetter = ({ tNewsLetter }: Props) => {
     return (
         <>
             <div className="">
                 <div className="container mx-auto px-5 rounded-lg xl:max-w-screen-xl">
                     <div className="p-5">
                         <div>
-                            <h1 className="text-3xl font-bold text-center text-white">Sign up for our newsletter</h1>
+                            <h1 className="text-3xl font-bold text-center text-white">{tNewsLetter.news_letter_sign_up}</h1>
                             <form className="mt-5 sm:mx-auto sm:flex sm:max-w-lg">
-                                <input className="block w-full px-5 py-3 outline-none border rounded shadow-sm text-gray-300 border-[#3c3c3c] bg-[#121212] focus:border-white focus:ring-1 focus:ring-white" type="email" placeholder="Your e-mail" required={true} />
-                                <button className="w-full mt-2.5 px-5 py-3 rounded shadow-sm focus:outline-none font-medium text-white bg-blue-600 sm:flex-shrink-0 sm:w-auto sm:mt-0 sm:ml-5">Subscribe</button>
+                                <input className="block w-full px-5 py-3 outline-none border rounded shadow-sm text-gray-300 border-[#3c3c3c] bg-[#121212] focus:border-white focus:ring-1 focus:ring-white" type="email" placeholder={`${tNewsLetter.news_letter_holder}`} required={true} />
+                                <button className="w-full mt-2.5 px-5 py-3 rounded shadow-sm focus:outline-none font-medium text-white bg-blue-600 sm:flex-shrink-0 sm:w-auto sm:mt-0 sm:ml-5">{tNewsLetter.news_letter_subscribe}</button>
                             </form>
                         </div>
-                        <div className="w-full mt-5 sm:w-auto">
+                        {/* <div className="w-full mt-5 sm:w-auto">
                             <div className="flex justify-center space-x-2.5 ">
                                 <a href="" className="p-2.5 rounded-full border-2 border-white transition-colors hover:bg-blue-600" target="_blank">
                                     <svg className="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
@@ -36,7 +40,7 @@ const NewsLetter = () => {
                                     </svg>
                                 </a>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

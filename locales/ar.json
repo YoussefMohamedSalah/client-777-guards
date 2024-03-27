@@ -8,7 +8,10 @@
     "news": "اخبارنا",
     "contacts": "جهات الإتصال",
     "fast-access": "وصول سريع",
-    "our-companies": "شركاتنا"
+    "our-companies": "شركاتنا",
+    "news-letter-sign-up":"اشترك الان في نشرتنا الإخبارية",
+    "news-letter-holder":"ادخل الايميل الخاص بك",
+    "news-letter-subscribe" :"اشترك"
   },
   "HomePage": {
     "home-title":"الرئيسية",

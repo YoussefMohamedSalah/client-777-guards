@@ -18,7 +18,14 @@ const FooterWrapper = ({ lang }: Props) => {
     news: `${t("news")}`,
     contacts: `${t("contacts")}`,
     fast_access: `${t("fast-access")}`,
+
+    news_letter_sign_up: `${t("news-letter-sign-up")}`,
+    news_letter_holder: `${t("news-letter-holder")}`,
+    news_letter_subscribe: `${t("news-letter-subscribe")}`,
+
   };
+
+
 
   return (
     <div className="bg-secondary pb-[120px] md:pb-7">

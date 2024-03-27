@@ -119,7 +119,7 @@ const Footer = ({ tMenu, lang }: Props) => {
           <div className="lg:col-span-6">
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-3 space-y-6 mt-8 lg:mt-0 flex flex-col">
-                <div className="text-lg  xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.contacts}</div>
+                <div className="text-lg  xl:text-[18px] xl:leading-6 font-bold">{tMenu.contacts}</div>
                 <div className="font-light space-y-4 text-md md:text-sm">
                   {email && (
                     <div className="flex items-center">
@@ -165,7 +165,7 @@ const Footer = ({ tMenu, lang }: Props) => {
               </div>
               {/* FAST ACCESS */}
               <div className="lg:col-span-3 space-y-6 mt-8 lg:mt-0 flex flex-col">
-                <div className="text-lg xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.fast_access}</div>
+                <div className="text-lg xl:text-[18px] xl:leading-6 font-bold">{tMenu.fast_access}</div>
                 <div className="font-light space-y-4 text-md md:text-sm">
                   <div className="flex items-center">
                     <Link href={`/${lang}`}>
@@ -196,7 +196,7 @@ const Footer = ({ tMenu, lang }: Props) => {
               </div>
               {/* News Latter */}
               <div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0 flex flex-col">
-                <NewsLetter />
+                <NewsLetter tNewsLetter={tMenu} />
               </div>
             </div>
           </div>

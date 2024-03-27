@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface Props {
   tAboutUs: any;
@@ -7,7 +9,7 @@ interface Props {
 
 const MainSection = ({ tAboutUs }: Props) => {
   return (
-    <div className="my-5">
+    <motion.div className="my-5" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -50 }}>
       <p className="font-normal text-sm leading-3 text-indigo-400 hover:text-indigo-600 cursor-pointer">
         {tAboutUs.about}
       </p>
@@ -28,7 +30,7 @@ const MainSection = ({ tAboutUs }: Props) => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

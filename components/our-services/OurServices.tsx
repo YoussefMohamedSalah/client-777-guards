@@ -2,6 +2,7 @@
 import { Lora } from "next/font/google";
 import Link from "next/link";
 import { PiArrowLeft, PiArrowRight } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 const font = Lora({
   subsets: ["latin"],
@@ -51,7 +52,12 @@ const OurServices = ({ tAboutUs, lang }: Props) => {
         <div className="text-3xl xl:text-5xl font-medium justify-center items-center flex">{tAboutUs.our_services}</div>
         <div className="grid md:grid-cols-2 gap-4 xl:gap-6 mt-8 md:px-16 xl:px-0  mx-auto md:w-full">
           {tabs.map((tab, index) => (
-            <div key={index} className="w-full">
+            <motion.div key={index} className="w-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}>
               <Link href={`/${lang}/contact-us`} legacyBehavior passHref>
                 <div className="flex flex-col align-center">
                   <div className="text-sky-500 flex items-center hover:underline hover:cursor-pointer text-sm">
@@ -66,7 +72,7 @@ const OurServices = ({ tAboutUs, lang }: Props) => {
                 </div>
               </Link>
               <p className="font-normal text-base leading-6 text-gray-300 mt-6">{tab.subheading}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

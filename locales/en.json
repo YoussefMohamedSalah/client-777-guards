@@ -8,7 +8,10 @@
     "news": "News",
     "contacts": "Contacts",
     "fast-access": "Fast access",
-    "our-companies": "Our Companies"
+    "our-companies": "Our Companies",
+    "news-letter-sign-up":"Sign up for our newsletter",
+    "news-letter-holder":"Your e-mail",
+    "news-letter-subscribe" :"Subscribe"
   },
   "HomePage": {
     "home-title":"Home",

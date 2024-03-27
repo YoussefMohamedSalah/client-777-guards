@@ -74,6 +74,12 @@ export const Menu = ({ tMenu, lang }: Props) => {
         {/* children end */}
 
         <NavigationMenuItem>
+          <Link href={`/${lang}/our-customers`} legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.our_customers}</NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
           <Link href={`/${lang}/jobs`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>{tMenu.jobs}</NavigationMenuLink>
           </Link>

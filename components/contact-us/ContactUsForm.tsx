@@ -1,5 +1,5 @@
-"use client";
-
+"use client"
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -75,7 +75,12 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
   }
 
   return (
-    <div className="w-full px-2">
+    <motion.div
+      initial={{ opacity: 0, x: -200 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="w-full px-2"
+    >
       <Form {...form}>
         {!submitted ? (
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -175,6 +180,6 @@ export default function ContactUsForm({ tContactUs, lang }: Props) {
           </>
         )}
       </Form>
-    </div>
+    </motion.div>
   );
 }

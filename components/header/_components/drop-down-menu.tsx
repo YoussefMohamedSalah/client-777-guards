@@ -60,6 +60,12 @@ const DropdownMenu: React.FC<DropDownMenuProps> = ({ onClose, tMenu, lang, socia
         </Link>
         <Link
           onClick={handleLinkClick}
+          href={`/${lang}/our-customers`}
+          className="flex flex-1 items-center justify-between py-3 border-b">
+          {tMenu.our_customers}
+        </Link>
+        <Link
+          onClick={handleLinkClick}
           href={`/${lang}/jobs`}
           className="flex flex-1 items-center justify-between py-3 border-b">
           {tMenu.jobs}

@@ -5,6 +5,7 @@ import ActionButtons from "./_components/action-buttons";
 import Logo from "./_components/logo";
 import { Menu } from "./_components/menu";
 import LangSwitcher from "./_components/LangSwitcher";
+import TopHeader from "./TopHeader";
 
 interface Props {
   lang: string;
@@ -13,6 +14,7 @@ interface Props {
 
 const Header = ({ lang, tMenu }: Props) => {
   const [social, setSocial] = useState<any[]>([]);
+  const [websiteData, setWebsiteData] = useState<any>({})
 
   useEffect(() => {
     fetchWebsiteData();
@@ -26,8 +28,10 @@ const Header = ({ lang, tMenu }: Props) => {
       }
       let data = await res.json();
       let socialData = [];
+      if (data) {
+        setWebsiteData(data)
+      }
 
-      console.log(data)
       if (data.facebook) {
         socialData.push({
           id: 1,
@@ -71,23 +75,28 @@ const Header = ({ lang, tMenu }: Props) => {
   `;
 
   return (
-    <div className={navbarClasses}>
-      <div className="container flex items-center justify-between">
-        <div className="flex items-center justify-center gap-2">
-          <div className="hidden md:block">
+    <>
+      {websiteData && (
+        <TopHeader data={websiteData} />
+      )}
+      <div className={navbarClasses}>
+        <div className="container flex items-center justify-between">
+          <div className="flex items-center justify-center gap-2">
+            <div className="hidden md:block">
+              <Logo lang={lang} />
+            </div>
+            <div className="md:hidden">
+              <LangSwitcher lang={lang} />
+            </div>
+            <Menu tMenu={tMenu} lang={lang} />
+          </div>
+          <div className="self-center md:hidden">
             <Logo lang={lang} />
           </div>
-          <div className="md:hidden">
-            <LangSwitcher lang={lang} />
-          </div>
-          <Menu tMenu={tMenu} lang={lang} />
+          <ActionButtons lang={lang} tContactUs={tMenu.contact_us} tMenu={tMenu} social={social} />
         </div>
-        <div className="self-center md:hidden">
-          <Logo lang={lang} />
-        </div>
-        <ActionButtons lang={lang} tContactUs={tMenu.contact_us} tMenu={tMenu} social={social} />
       </div>
-    </div>
+    </>
   );
 };
 

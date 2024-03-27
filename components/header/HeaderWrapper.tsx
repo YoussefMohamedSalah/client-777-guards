@@ -16,6 +16,7 @@ const HeaderWrapper = ({ lang }: Props) => {
     jobs: `${t("jobs")}`,
     contact_us: `${t("contact-us")}`,
     our_companies: `${t("our-companies")}`,
+    our_customers: `${t("our-customers")}`,
   };
 
   return (

@@ -182,11 +182,11 @@ const Footer = ({ tMenu, lang }: Props) => {
                       <span className="ml-2">{tMenu.about_us}</span>
                     </Link>
                   </div>
-                  {/* <div className="flex items-center">
-                    <Link href={`/${lang}/news`}>
-                      <span className="ml-2">{tMenu.news}</span>
+                  <div className="flex items-center">
+                    <Link href={`/${lang}/our-customers`}>
+                      <span className="ml-2">{tMenu.our_customers}</span>
                     </Link>
-                  </div> */}
+                  </div>
                   <div className="flex items-center">
                     <Link href={`/${lang}/jobs`}>
                       <span className="ml-2">{tMenu.jobs}</span>

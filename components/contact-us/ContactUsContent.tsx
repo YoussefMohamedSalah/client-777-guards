@@ -1,3 +1,6 @@
+"use client"
+import { motion } from "framer-motion";
+
 import React from "react";
 import { PiCheckLight } from "react-icons/pi";
 
@@ -7,7 +10,12 @@ interface Props {
 
 const ContactUsContent = ({ tContactUs }: Props) => {
   return (
-    <div className="w-full">
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="w-full"
+    >
       <div className="text-5xl font-medium w-2/3">{tContactUs.have_question}</div>
       <div className="py-4 text-gray-300">
         {tContactUs.lets_talk} 777 <span className="text-[#051fb3] text-2xl">GUARD</span>s {tContactUs.help_you}.
@@ -32,7 +40,7 @@ const ContactUsContent = ({ tContactUs }: Props) => {
           <div className=" font-normal pb-4 w-80">{tContactUs.info_three}</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -16,6 +16,7 @@ const FooterWrapper = ({ lang }: Props) => {
     jobs: `${t("jobs")}`,
     contact_us: `${t("contact-us")}`,
     news: `${t("news")}`,
+    our_customers: `${t("our-customers")}`,
     contacts: `${t("contacts")}`,
     fast_access: `${t("fast-access")}`,
 

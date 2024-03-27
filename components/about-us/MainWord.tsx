@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image"
 
 interface Props {
   tAboutUs: any;
@@ -10,13 +11,24 @@ const MainWord = ({ tAboutUs }: Props) => {
   return (
 
     <div className="my-5">
-      <p className="font-normal text-lg leading-3 text-yellow-500	hover:text-yellow-600 cursor-pointer pb-4">
-        {tAboutUs.head_word_title}
-      </p>
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-        <div className="w-full lg:w-12/12">
-          <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">{tAboutUs.mohamed}</h2>
-          <p className="font-normal text-lg leading-6 text-gray-300 mt-4">{tAboutUs.head_word}</p>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex justify-center items-center pb-6">
+        <div className="w-full lg:w-7/12 bg-white rounded-lg shadow-lg p-6">
+          <p className="font-normal text-lg font-bold leading-3 text-yellow-500	hover:text-yellow-600 cursor-pointer pb-4">
+            {tAboutUs.head_word_title}
+          </p>
+          <h2 className="font-bold lg:text-4xl text-3xl text-black lg:leading-10 leading-9">{tAboutUs.mohamed}</h2>
+          <p className="font-normal lg:text-2xl leading-3 text-black mt-4">{tAboutUs.head_word}</p>
+          <div className="my-2 flex justify-start items-end" dir="ltr">
+            {/* Signature Title */}
+            <Image src="/logos/logopng.png" alt="logo" width={200} height={200} className="w-16 me-4" />
+            <div>
+              <Image width={105} height={80} src="/assets/signature.png" alt="Signature" className="w-auto mr-4"
+                quality={100}
+                loading="eager"
+              />
+              <p className="font-bold text-lg text-black">Mohamed Atef Al ba'ag, <span className="text-yellow-500"> Ceo & Co Founder</span></p>
+            </div>
+          </div>
         </div>
       </motion.div>
 

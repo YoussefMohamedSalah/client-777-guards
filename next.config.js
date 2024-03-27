@@ -8,6 +8,11 @@ const nextConfig = {
         pathname: "**",
       },
       {
+        protocol: "https",
+        hostname: "api.777-guards.com",
+        pathname: "**",
+      },
+      {
         protocol: "http",
         hostname: "localhost",
         pathname: "**",

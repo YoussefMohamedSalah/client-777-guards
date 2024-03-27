@@ -46,8 +46,8 @@ const ActionButtons = ({ lang, tContactUs, tMenu, social }: Props) => {
         <div className="font-thin lg:flex items-center hidden">|</div>
         <div className="flex lg:space-x-4 items-center px-4">
           <ul className="md:flex hidden flex-wrap md:mx-0 gap-3 ">
-            {social?.map((item) => (
-              <li className="transition hover:opacity-80" key={`social-list--key${item.id}`}>
+            {social?.map((item, index: number) => (
+              <li className="transition hover:opacity-80" key={`social-list--key${index}`}>
                 <Link href={item.path ? item.path : "/#"} target="_blank" rel="noreferrer">
                   <Image
                     src={item.image}

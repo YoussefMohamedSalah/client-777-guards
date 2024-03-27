@@ -7,6 +7,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import { GiRotaryPhone } from "react-icons/gi";
 import { useState, useEffect } from "react";
 import { IoLocationSharp } from "react-icons/io5";
+import NewsLetter from "./NewsLetter";
 
 interface Props {
   tMenu: any;
@@ -81,11 +82,11 @@ const Footer = ({ tMenu, lang }: Props) => {
   };
 
   return (
-    <div className="border-t border-gray-600 mt-10">
-      <div className="container my-6">
+    <div className="border-t border-gray-600 mt-10 px-5">
+      <div className="container-2xl my-6">
         <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 md:px-0">
           {/* MAP */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <div className="lg:grid lg:grid-cols-12">
               <div className="lg:col-span-8">
                 <LocationMap />
@@ -97,8 +98,8 @@ const Footer = ({ tMenu, lang }: Props) => {
                     <Image src="/logos/logopng.png" width={150} height={150} alt="logo" className="w-18 pb-3" />
                   </Link>
                   <ul className="flex flex-wrap space-s-4 md:space-s-5 mx-auto md:mx-0 gap-3 pt-2">
-                    {social?.map((item) => (
-                      <li className="transition hover:opacity-80" key={`social-list--key${item.id}`}>
+                    {social?.map((item, index: number) => (
+                      <li className="transition hover:opacity-80" key={`social-list--key${index}`}>
                         <Link href={item.path ? item.path : "/#"} target="_blank" rel="noreferrer">
                           <Image
                             src={item.image}
@@ -115,9 +116,9 @@ const Footer = ({ tMenu, lang }: Props) => {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-5">
-            <div className="lg:grid lg:grid-cols-12 ">
-              <div className="lg:col-span-7 space-y-6 mt-8 lg:mt-0 flex flex-col">
+          <div className="lg:col-span-6">
+            <div className="lg:grid lg:grid-cols-12">
+              <div className="lg:col-span-3 space-y-6 mt-8 lg:mt-0 flex flex-col">
                 <div className="text-lg  xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.contacts}</div>
                 <div className="font-light space-y-4 text-md md:text-sm">
                   {email && (
@@ -163,7 +164,7 @@ const Footer = ({ tMenu, lang }: Props) => {
                 </div>
               </div>
               {/* FAST ACCESS */}
-              <div className="lg:col-span-5 space-y-6 mt-8 lg:mt-0 flex flex-col">
+              <div className="lg:col-span-3 space-y-6 mt-8 lg:mt-0 flex flex-col">
                 <div className="text-lg xl:text-[18px] xl:leading-6 font-bold self-center">{tMenu.fast_access}</div>
                 <div className="font-light space-y-4 text-md md:text-sm">
                   <div className="flex items-center">
@@ -192,6 +193,10 @@ const Footer = ({ tMenu, lang }: Props) => {
                     </Link>
                   </div>
                 </div>
+              </div>
+              {/* News Latter */}
+              <div className="lg:col-span-6 space-y-6 mt-8 lg:mt-0 flex flex-col">
+                <NewsLetter />
               </div>
             </div>
           </div>

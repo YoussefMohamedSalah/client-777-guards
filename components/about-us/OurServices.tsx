@@ -48,7 +48,7 @@ const OurServices = ({ tAboutUs, lang }: Props) => {
           {tabs.map((tab, index) => (
             <div key={index} className="w-full">
               <Link href={`/${lang}/contact-us`} legacyBehavior passHref>
-                <p className="font-semibold lg:text-2xl text-md lg:leading-6 leading-5 mt-3 hover:text-indigo-600">
+                <p className="font-semibold lg:text-2xl text-md lg:leading-6 leading-5 mt-3 hover:text-indigo-600 hover:cursor-pointer">
                   {tab.header}
                 </p>
               </Link>
